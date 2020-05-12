@@ -22,9 +22,9 @@
       <h1><?php echo $heading_title; ?></h1>
       <div class="panel-group" id="accordion">
         <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title"><?php echo $text_checkout_option; ?></h4>
-          </div>
+          <!--<div class="panel-heading">
+            <h4 class="panel-title"><?php // echo $text_checkout_option; ?></h4>
+          </div>-->
           <div class="panel-collapse collapse" id="collapse-checkout-option">
             <div class="panel-body"></div>
           </div>
