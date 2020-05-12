@@ -30,7 +30,7 @@
           </div>
         </div>
         <?php if (!$logged && $account != 'guest') { ?>
-        <div class="panel panel-default">
+        <div class="panel panel-default hidden">
           <div class="panel-heading">
             <h4 class="panel-title"><?php echo $text_checkout_account; ?></h4>
           </div>
@@ -39,7 +39,7 @@
           </div>
         </div>
         <?php } else { ?>
-        <div class="panel panel-default">
+        <div class="panel panel-default hidden">
           <div class="panel-heading">
             <h4 class="panel-title"><?php echo $text_checkout_payment_address; ?></h4>
           </div>
