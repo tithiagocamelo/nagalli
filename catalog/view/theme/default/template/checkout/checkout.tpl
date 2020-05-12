@@ -31,18 +31,22 @@
         </div>
         <?php if (!$logged && $account != 'guest') { ?>
         <div class="panel panel-default hidden">
-          <div class="panel-heading">
-            <h4 class="panel-title"><?php echo $text_checkout_account; ?></h4>
-          </div>
+          <!--
+            <div class="panel-heading">
+              <h4 class="panel-title"><?php //echo $text_checkout_account; ?></h4>
+            </div>
+          --> 
           <div class="panel-collapse collapse" id="collapse-payment-address">
             <div class="panel-body"></div>
           </div>
         </div>
         <?php } else { ?>
         <div class="panel panel-default hidden">
-          <div class="panel-heading">
-            <h4 class="panel-title"><?php echo $text_checkout_payment_address; ?></h4>
-          </div>
+          <!--
+            <div class="panel-heading">
+              <h4 class="panel-title"><?php //echo $text_checkout_payment_address; ?></h4>
+            </div>
+          -->
           <div class="panel-collapse collapse" id="collapse-payment-address">
             <div class="panel-body"></div>
           </div>
@@ -111,9 +115,10 @@ $(document).ready(function() {
         success: function(html) {
            $('#collapse-checkout-option .panel-body').html(html);
 
-			$('#collapse-checkout-option').parent().find('.panel-heading .panel-title').html('<a href="#collapse-checkout-option" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_option; ?> <i class="fa fa-caret-down"></i></a>');
-
-			$('a[href=\'#collapse-checkout-option\']').trigger('click');
+			// $('#collapse-checkout-option').parent().find('.panel-heading .panel-title').html('<a href="#collapse-checkout-option" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_option; ?> <i class="fa fa-caret-down"></i></a>');
+            $('#collapse-checkout-option').removeClass('hidden');
+            $('#collapse-checkout-option').addClass('in');
+			// $('a[href=\'#collapse-checkout-option\']').trigger('click');
         },
         error: function(xhr, ajaxOptions, thrownError) {
             alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
@@ -128,9 +133,10 @@ $(document).ready(function() {
         success: function(html) {
             $('#collapse-payment-address .panel-body').html(html);
 
-			$('#collapse-payment-address').parent().find('.panel-heading .panel-title').html('<a href="#collapse-payment-address" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_payment_address; ?> <i class="fa fa-caret-down"></i></a>');
-
-			$('a[href=\'#collapse-payment-address\']').trigger('click');
+			// $('#collapse-payment-address').parent().find('.panel-heading .panel-title').html('<a href="#collapse-payment-address" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_payment_address; ?> <i class="fa fa-caret-down"></i></a>');
+            $('#collapse-payment-address').addClass('in');
+            $('#collapse-payment-address').removeClass('hidden');
+			// $('a[href=\'#collapse-payment-address\']').trigger('click');
         },
         error: function(xhr, ajaxOptions, thrownError) {
             alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
