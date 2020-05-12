@@ -25,13 +25,6 @@ class ControllerCheckoutCheckout extends Controller {
 
 		$this->load->language('checkout/checkout');
 
-		//Verifica se está em modo de teste
-        if (!$this->config->get('pagseguro_modo_teste')) {
-          $this->document->addScript('https://stc.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.directpayment.js');
-        } else {
-          $this->document->addScript('https://stc.sandbox.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.directpayment.js');
-        }
-
 		$this->document->setTitle($this->language->get('heading_title'));
 
 		$this->document->addScript('catalog/view/javascript/jquery/datetimepicker/moment.js');
