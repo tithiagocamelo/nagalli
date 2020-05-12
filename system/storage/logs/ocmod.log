@@ -1,0 +1,1016 @@
+2017-11-03 18:04:37 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 49
+LINE: 108
+LINE: 120
+LINE: 165
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 38
+LINE: 40
+LINE: 49
+LINE: 51
+LINE: 60
+LINE: 62
+
+FILE: system/library/template/php.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/tiwg.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 24
+----------------------------------------------------------------
+MOD: Todas as URLs amigáveis para OpenCart 2.2 e 2.3
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: class ControllerStartupSeoUrl extends Controller {
+LINE: 51
+CODE: $this->request->get['route'] = 'error/not_found';
+LINE: 97
+CODE: unset($data[$key]);
+LINE: 157
+----------------------------------------------------------------
+2017-11-03 18:04:38 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 49
+LINE: 108
+LINE: 120
+LINE: 165
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 38
+LINE: 40
+LINE: 49
+LINE: 51
+LINE: 60
+LINE: 62
+
+FILE: system/library/template/php.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/tiwg.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 24
+----------------------------------------------------------------
+MOD: Todas as URLs amigáveis para OpenCart 2.2 e 2.3
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: class ControllerStartupSeoUrl extends Controller {
+LINE: 51
+CODE: $this->request->get['route'] = 'error/not_found';
+LINE: 97
+CODE: unset($data[$key]);
+LINE: 157
+----------------------------------------------------------------
+2017-11-03 18:48:38 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 49
+LINE: 108
+LINE: 120
+LINE: 165
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 38
+LINE: 40
+LINE: 49
+LINE: 51
+LINE: 60
+LINE: 62
+
+FILE: system/library/template/php.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/tiwg.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 24
+----------------------------------------------------------------
+MOD: Todas as URLs amigáveis para OpenCart 2.2 e 2.3
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: class ControllerStartupSeoUrl extends Controller {
+LINE: 51
+CODE: $this->request->get['route'] = 'error/not_found';
+LINE: 97
+CODE: unset($data[$key]);
+LINE: 157
+----------------------------------------------------------------
+2017-11-03 19:31:53 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 49
+LINE: 108
+LINE: 120
+LINE: 165
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 38
+LINE: 40
+LINE: 49
+LINE: 51
+LINE: 60
+LINE: 62
+
+FILE: system/library/template/php.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/tiwg.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 24
+----------------------------------------------------------------
+MOD: Todas as URLs amigáveis para OpenCart 2.2 e 2.3
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: class ControllerStartupSeoUrl extends Controller {
+LINE: 51
+CODE: $this->request->get['route'] = 'error/not_found';
+LINE: 97
+CODE: unset($data[$key]);
+LINE: 157
+----------------------------------------------------------------
+2017-11-06 14:44:43 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 49
+LINE: 108
+LINE: 120
+LINE: 165
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 38
+LINE: 40
+LINE: 49
+LINE: 51
+LINE: 60
+LINE: 62
+
+FILE: system/library/template/php.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/tiwg.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 24
+----------------------------------------------------------------
+MOD: Todas as URLs amigáveis para OpenCart 2.2 e 2.3
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: class ControllerStartupSeoUrl extends Controller {
+LINE: 51
+CODE: $this->request->get['route'] = 'error/not_found';
+LINE: 97
+CODE: unset($data[$key]);
+LINE: 157
+----------------------------------------------------------------
+2018-01-17 6:09:20 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 49
+LINE: 108
+LINE: 120
+LINE: 165
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 38
+LINE: 40
+LINE: 49
+LINE: 51
+LINE: 60
+LINE: 62
+
+FILE: system/library/template/php.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/tiwg.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 24
+----------------------------------------------------------------
+2018-01-17 6:37:53 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 49
+LINE: 108
+LINE: 120
+LINE: 165
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 38
+LINE: 40
+LINE: 49
+LINE: 51
+LINE: 60
+LINE: 62
+
+FILE: system/library/template/php.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/tiwg.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 24
+----------------------------------------------------------------
+MOD: Newsletter
+
+FILE: admin/controller/common/column_left.php
+CODE: if ($marketing) {
+LINE: 398
+
+FILE: admin/controller/marketing/contact.php
+CODE: $data['text_product'] = $this->language->get('text_product');
+LINE: 18
+CODE: $this->load->model('marketing/affiliate');
+LINE: 110
+CODE: case 'affiliate':
+LINE: 200
+
+FILE: admin/view/template/marketing/contact.tpl
+CODE: <option value="product"><?php echo $text_product; ?></option>
+LINE: 43
+----------------------------------------------------------------
+2018-01-25 6:16:37 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 49
+LINE: 108
+LINE: 120
+LINE: 165
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 38
+LINE: 40
+LINE: 49
+LINE: 51
+LINE: 60
+LINE: 62
+
+FILE: system/library/template/php.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/tiwg.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 24
+----------------------------------------------------------------
+MOD: Newsletter
+
+FILE: admin/controller/common/column_left.php
+CODE: if ($marketing) {
+LINE: 398
+
+FILE: admin/controller/marketing/contact.php
+CODE: $data['text_product'] = $this->language->get('text_product');
+LINE: 18
+CODE: $this->load->model('marketing/affiliate');
+LINE: 110
+CODE: case 'affiliate':
+LINE: 200
+
+FILE: admin/view/template/marketing/contact.tpl
+CODE: <option value="product"><?php echo $text_product; ?></option>
+LINE: 43
+----------------------------------------------------------------
+2018-01-25 6:16:45 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 49
+LINE: 108
+LINE: 120
+LINE: 165
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 38
+LINE: 40
+LINE: 49
+LINE: 51
+LINE: 60
+LINE: 62
+
+FILE: system/library/template/php.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/tiwg.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 24
+----------------------------------------------------------------
+MOD: Newsletter
+
+FILE: admin/controller/common/column_left.php
+CODE: if ($marketing) {
+LINE: 398
+
+FILE: admin/controller/marketing/contact.php
+CODE: $data['text_product'] = $this->language->get('text_product');
+LINE: 18
+CODE: $this->load->model('marketing/affiliate');
+LINE: 110
+CODE: case 'affiliate':
+LINE: 200
+
+FILE: admin/view/template/marketing/contact.tpl
+CODE: <option value="product"><?php echo $text_product; ?></option>
+LINE: 43
+----------------------------------------------------------------
+2018-01-25 6:23:49 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 49
+LINE: 108
+LINE: 120
+LINE: 165
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 38
+LINE: 40
+LINE: 49
+LINE: 51
+LINE: 60
+LINE: 62
+
+FILE: system/library/template/php.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/tiwg.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 24
+----------------------------------------------------------------
+MOD: Newsletter
+
+FILE: admin/controller/common/column_left.php
+CODE: if ($marketing) {
+LINE: 398
+
+FILE: admin/controller/marketing/contact.php
+CODE: $data['text_product'] = $this->language->get('text_product');
+LINE: 18
+CODE: $this->load->model('marketing/affiliate');
+LINE: 110
+CODE: case 'affiliate':
+LINE: 200
+
+FILE: admin/view/template/marketing/contact.tpl
+CODE: <option value="product"><?php echo $text_product; ?></option>
+LINE: 43
+----------------------------------------------------------------
+2018-01-25 6:23:51 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 49
+LINE: 108
+LINE: 120
+LINE: 165
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 38
+LINE: 40
+LINE: 49
+LINE: 51
+LINE: 60
+LINE: 62
+
+FILE: system/library/template/php.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/tiwg.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 24
+----------------------------------------------------------------
+MOD: Newsletter
+
+FILE: admin/controller/common/column_left.php
+CODE: if ($marketing) {
+LINE: 398
+
+FILE: admin/controller/marketing/contact.php
+CODE: $data['text_product'] = $this->language->get('text_product');
+LINE: 18
+CODE: $this->load->model('marketing/affiliate');
+LINE: 110
+CODE: case 'affiliate':
+LINE: 200
+
+FILE: admin/view/template/marketing/contact.tpl
+CODE: <option value="product"><?php echo $text_product; ?></option>
+LINE: 43
+----------------------------------------------------------------
+2018-01-25 6:23:53 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 49
+LINE: 108
+LINE: 120
+LINE: 165
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 38
+LINE: 40
+LINE: 49
+LINE: 51
+LINE: 60
+LINE: 62
+
+FILE: system/library/template/php.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/tiwg.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 24
+----------------------------------------------------------------
+MOD: Newsletter
+
+FILE: admin/controller/common/column_left.php
+CODE: if ($marketing) {
+LINE: 398
+
+FILE: admin/controller/marketing/contact.php
+CODE: $data['text_product'] = $this->language->get('text_product');
+LINE: 18
+CODE: $this->load->model('marketing/affiliate');
+LINE: 110
+CODE: case 'affiliate':
+LINE: 200
+
+FILE: admin/view/template/marketing/contact.tpl
+CODE: <option value="product"><?php echo $text_product; ?></option>
+LINE: 43
+----------------------------------------------------------------
+2018-01-25 12:14:52 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 49
+LINE: 108
+LINE: 120
+LINE: 165
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 38
+LINE: 40
+LINE: 49
+LINE: 51
+LINE: 60
+LINE: 62
+
+FILE: system/library/template/php.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/tiwg.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 24
+----------------------------------------------------------------
+MOD: Newsletter
+
+FILE: admin/controller/common/column_left.php
+CODE: if ($marketing) {
+LINE: 398
+
+FILE: admin/controller/marketing/contact.php
+CODE: $data['text_product'] = $this->language->get('text_product');
+LINE: 18
+CODE: $this->load->model('marketing/affiliate');
+LINE: 110
+CODE: case 'affiliate':
+LINE: 200
+
+FILE: admin/view/template/marketing/contact.tpl
+CODE: <option value="product"><?php echo $text_product; ?></option>
+LINE: 43
+----------------------------------------------------------------
+2018-01-25 12:22:48 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 49
+LINE: 108
+LINE: 120
+LINE: 165
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 38
+LINE: 40
+LINE: 49
+LINE: 51
+LINE: 60
+LINE: 62
+
+FILE: system/library/template/php.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/tiwg.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 24
+----------------------------------------------------------------
+MOD: Newsletter
+
+FILE: admin/controller/common/column_left.php
+CODE: if ($marketing) {
+LINE: 398
+
+FILE: admin/controller/marketing/contact.php
+CODE: $data['text_product'] = $this->language->get('text_product');
+LINE: 18
+CODE: $this->load->model('marketing/affiliate');
+LINE: 110
+CODE: case 'affiliate':
+LINE: 200
+
+FILE: admin/view/template/marketing/contact.tpl
+CODE: <option value="product"><?php echo $text_product; ?></option>
+LINE: 43
+----------------------------------------------------------------
+2018-01-25 12:22:51 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 49
+LINE: 108
+LINE: 120
+LINE: 165
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 38
+LINE: 40
+LINE: 49
+LINE: 51
+LINE: 60
+LINE: 62
+
+FILE: system/library/template/php.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/tiwg.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 24
+----------------------------------------------------------------
+MOD: Newsletter
+
+FILE: admin/controller/common/column_left.php
+CODE: if ($marketing) {
+LINE: 398
+
+FILE: admin/controller/marketing/contact.php
+CODE: $data['text_product'] = $this->language->get('text_product');
+LINE: 18
+CODE: $this->load->model('marketing/affiliate');
+LINE: 110
+CODE: case 'affiliate':
+LINE: 200
+
+FILE: admin/view/template/marketing/contact.tpl
+CODE: <option value="product"><?php echo $text_product; ?></option>
+LINE: 43
+----------------------------------------------------------------
+2018-01-25 12:27:59 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 49
+LINE: 108
+LINE: 120
+LINE: 165
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 38
+LINE: 40
+LINE: 49
+LINE: 51
+LINE: 60
+LINE: 62
+
+FILE: system/library/template/php.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/tiwg.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 24
+----------------------------------------------------------------
+MOD: Newsletter
+
+FILE: admin/controller/common/column_left.php
+CODE: if ($marketing) {
+LINE: 398
+
+FILE: admin/controller/marketing/contact.php
+CODE: $data['text_product'] = $this->language->get('text_product');
+LINE: 18
+CODE: $this->load->model('marketing/affiliate');
+LINE: 110
+CODE: case 'affiliate':
+LINE: 200
+
+FILE: admin/view/template/marketing/contact.tpl
+CODE: <option value="product"><?php echo $text_product; ?></option>
+LINE: 43
+----------------------------------------------------------------
+2018-01-25 12:28:22 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 49
+LINE: 108
+LINE: 120
+LINE: 165
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 38
+LINE: 40
+LINE: 49
+LINE: 51
+LINE: 60
+LINE: 62
+
+FILE: system/library/template/php.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/tiwg.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 24
+----------------------------------------------------------------
+MOD: Newsletter
+
+FILE: admin/controller/common/column_left.php
+CODE: if ($marketing) {
+LINE: 398
+
+FILE: admin/controller/marketing/contact.php
+CODE: $data['text_product'] = $this->language->get('text_product');
+LINE: 18
+CODE: $this->load->model('marketing/affiliate');
+LINE: 110
+CODE: case 'affiliate':
+LINE: 200
+
+FILE: admin/view/template/marketing/contact.tpl
+CODE: <option value="product"><?php echo $text_product; ?></option>
+LINE: 43
+----------------------------------------------------------------
+2018-01-26 6:23:06 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 49
+LINE: 108
+LINE: 120
+LINE: 165
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 38
+LINE: 40
+LINE: 49
+LINE: 51
+LINE: 60
+LINE: 62
+
+FILE: system/library/template/php.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/tiwg.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 24
+----------------------------------------------------------------
+MOD: Newsletter
+
+FILE: admin/controller/common/column_left.php
+CODE: if ($marketing) {
+LINE: 398
+
+FILE: admin/controller/marketing/contact.php
+CODE: $data['text_product'] = $this->language->get('text_product');
+LINE: 18
+CODE: $this->load->model('marketing/affiliate');
+LINE: 110
+CODE: case 'affiliate':
+LINE: 200
+
+FILE: admin/view/template/marketing/contact.tpl
+CODE: <option value="product"><?php echo $text_product; ?></option>
+LINE: 43
+----------------------------------------------------------------
+2018-02-08 11:21:12 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 49
+LINE: 108
+LINE: 120
+LINE: 165
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 38
+LINE: 40
+LINE: 49
+LINE: 51
+LINE: 60
+LINE: 62
+
+FILE: system/library/template/php.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/tiwg.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 24
+----------------------------------------------------------------
+MOD: Newsletter
+
+FILE: admin/controller/common/column_left.php
+CODE: if ($marketing) {
+LINE: 398
+
+FILE: admin/controller/marketing/contact.php
+CODE: $data['text_product'] = $this->language->get('text_product');
+LINE: 18
+CODE: $this->load->model('marketing/affiliate');
+LINE: 110
+CODE: case 'affiliate':
+LINE: 200
+
+FILE: admin/view/template/marketing/contact.tpl
+CODE: <option value="product"><?php echo $text_product; ?></option>
+LINE: 43
+----------------------------------------------------------------
+2018-02-12 6:21:25 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 49
+LINE: 108
+LINE: 120
+LINE: 165
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 38
+LINE: 40
+LINE: 49
+LINE: 51
+LINE: 60
+LINE: 62
+
+FILE: system/library/template/php.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/tiwg.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 24
+----------------------------------------------------------------
+MOD: Newsletter
+
+FILE: admin/controller/common/column_left.php
+CODE: if ($marketing) {
+LINE: 398
+
+FILE: admin/controller/marketing/contact.php
+CODE: $data['text_product'] = $this->language->get('text_product');
+LINE: 18
+CODE: $this->load->model('marketing/affiliate');
+LINE: 110
+CODE: case 'affiliate':
+LINE: 200
+
+FILE: admin/view/template/marketing/contact.tpl
+CODE: <option value="product"><?php echo $text_product; ?></option>
+LINE: 43
+----------------------------------------------------------------
+2020-05-11 14:30:33 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 49
+LINE: 108
+LINE: 120
+LINE: 165
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 38
+LINE: 40
+LINE: 49
+LINE: 51
+LINE: 60
+LINE: 62
+
+FILE: system/library/template/php.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/tiwg.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 24
+----------------------------------------------------------------

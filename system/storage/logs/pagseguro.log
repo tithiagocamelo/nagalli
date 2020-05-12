@@ -1,0 +1,54 @@
+2018-02-06 4:32:08 - Array
+(
+    [data] => {
+    "email": "thiagoc@lightsystemsoft.com.br",
+    "token": "94DEDDB00A4848CCBBD7B6DCEBB88D93",
+    "paymentMode": "default",
+    "paymentMethod": "creditCard",
+    "currency": "BRL",
+    "notificationURL": "http:\/\/revendalight.com.br\/loristores\/index.php?route=extension\/payment\/pagseguro\/callback",
+    "reference": "Pedido #39",
+    "itemId1": "128",
+    "itemDescription1": "ANEL CONCHA | AN0094",
+    "itemAmount1": "10.67",
+    "itemQuantity1": "3",
+    "extraAmount": "0.00",
+    "senderName": "TESTE THIAGO",
+    "senderCPF": "40163971897",
+    "senderAreaCode": "12",
+    "senderPhone": "34567879",
+    "senderEmail": "c51434726923869553212@sandbox.pagseguro.com.br",
+    "senderHash": "3057be03fa517cb554ba141660fc1e106ef12fe8845bbcb04ae83a2a691bece7",
+    "shippingAddressStreet": "Rua Baianinha",
+    "shippingAddressNumber": "28",
+    "shippingAddressDistrict": "queiroz",
+    "shippingAddressPostalCode": "13485030",
+    "shippingAddressCity": "Limeira",
+    "shippingAddressState": "SP",
+    "shippingAddressCountry": "BRA",
+    "shippingType": 2,
+    "shippingCost": "16.10",
+    "creditCardToken": "d40da7a3e9e7445fa9ac789ec11e9703",
+    "installmentQuantity": "1",
+    "installmentValue": "48.11",
+    "noInterestInstallmentQuantity": "2",
+    "creditCardHolderName": "Thiago da Costa Camelo",
+    "creditCardHolderCPF": "40163971897",
+    "creditCardHolderBirthDate": "02\/06\/1991",
+    "creditCardHolderAreaCode": "12",
+    "creditCardHolderPhone": "34567879",
+    "billingAddressStreet": "Rua Baianinha",
+    "billingAddressNumber": "28",
+    "billingAddressDistrict": "queiroz",
+    "billingAddressPostalCode": "13485030",
+    "billingAddressCity": "Limeira",
+    "billingAddressState": "SP",
+    "billingAddressCountry": "BRA"
+}
+)
+
+2018-02-06 4:32:08 - Array
+(
+    [response] => <?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?><transaction><date>2018-02-06T08:32:06.000-02:00</date><code>92FB3BFE-40A3-4999-9CF6-ACB8D112E464</code><reference>Pedido #39</reference><type>1</type><status>1</status><lastEventDate>2018-02-06T08:32:06.000-02:00</lastEventDate><paymentMethod><type>1</type><code>101</code></paymentMethod><grossAmount>48.11</grossAmount><discountAmount>0.00</discountAmount><feeAmount>2.32</feeAmount><netAmount>45.79</netAmount><extraAmount>0.00</extraAmount><installmentCount>1</installmentCount><itemCount>1</itemCount><items><item><id>128</id><description>ANEL CONCHA | AN0094</description><quantity>3</quantity><amount>10.67</amount></item></items><sender><name>TESTE THIAGO</name><email>c51434726923869553212@sandbox.pagseguro.com.br</email><phone><areaCode>12</areaCode><number>34567879</number></phone><documents><document><type>CPF</type><value>40163971897</value></document></documents></sender><shipping><address><street>Rua Baianinha</street><number>28</number><complement></complement><district>queiroz</district><city>Limeira</city><state>SP</state><country>BRA</country><postalCode>13485030</postalCode></address><type>2</type><cost>16.10</cost></shipping><gatewaySystem><type>cielo</type><rawCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><rawMessage xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><normalizedCode xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><normalizedMessage xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><authorizationCode>0</authorizationCode><nsu>0</nsu><tid>0</tid><establishmentCode>1056784170</establishmentCode><acquirerName>CIELO</acquirerName></gatewaySystem></transaction>
+)
+

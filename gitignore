@@ -9,7 +9,6 @@ admin/error_log
 download/
 image/data/
 image/cache/
-image/catalog/
 system/cache/
 system/logs/
 
