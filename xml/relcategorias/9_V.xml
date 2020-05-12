@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<cadrelcat>
+	<product_related>
+		<product_id>35</product_id>
+		<related_id>36</related_id>
+	</product_related>
+	<product_related>
+		<product_id>36</product_id>
+		<related_id>35</related_id>
+	</product_related>
+</cadrelcat>

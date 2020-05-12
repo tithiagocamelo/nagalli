@@ -1,0 +1,170 @@
+<?php if(false) { ?>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <?php if ($informations) { ?>
+      <div class="col-sm-2">
+        <h5><?php echo $text_information; ?></h5>
+        <ul class="list-unstyled">
+          <?php foreach ($informations as $information) { ?>
+          <li><a href="<?php echo $information['href']; ?>"><?php echo $information['title']; ?></a></li>
+          <?php } ?>
+        </ul>
+      </div>
+      <?php } ?>
+      <div class="col-sm-2">
+        <h5><?php echo $text_service; ?></h5>
+        <ul class="list-unstyled">
+          <li><a href="<?php echo $contact; ?>"><?php echo $text_contact; ?></a></li>
+          <li><a href="<?php echo $return; ?>"><?php echo $text_return; ?></a></li>
+          <li><a href="<?php echo $sitemap; ?>"><?php echo $text_sitemap; ?></a></li>
+          <li><a href="https://rastreamentocorreios.info/">Rastrear pedido</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-2">
+        <h5><?php echo $text_extra; ?></h5>
+        <ul class="list-unstyled">
+          <li><a href="<?php echo $manufacturer; ?>"><?php echo $text_manufacturer; ?></a></li>
+          <li><a href="<?php echo $voucher; ?>"><?php echo $text_voucher; ?></a></li>
+          <li><a href="<?php echo $affiliate; ?>"><?php echo $text_affiliate; ?></a></li>
+          <li><a href="<?php echo $special; ?>"><?php echo $text_special; ?></a></li>
+        </ul>
+      </div>
+      <div class="col-sm-2">
+        <h5><?php echo $text_account; ?></h5>
+        <ul class="list-unstyled">
+          <li><a href="<?php echo $account; ?>"><?php echo $text_account; ?></a></li>
+          <li><a href="<?php echo $order; ?>"><?php echo $text_order; ?></a></li>
+          <li><a href="<?php echo $wishlist; ?>"><?php echo $text_wishlist; ?></a></li>
+          <li><a href="<?php echo $newsletter; ?>"><?php echo $text_newsletter; ?></a></li>
+        </ul>
+      </div>
+
+    <div class="col-sm-3" id="newsletter">
+      <h5><i class="fa fa-envelope"></i>NEWS</h5>
+      <p>ASSINE NOSSA NEWSLETTER</p>
+      <div class="form-group">
+        <input type="text" class="form-control form-control-lg" id="email" placeholder="E-mail">
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-default" style="width: 100%;" onclick="return regNewsletter();">Enviar</button>
+      </div>
+    </div>
+
+    </div>
+    <hr>
+    <p><?php echo $powered; ?></p>
+  </div>
+</footer>
+<?php } ?>
+
+
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <?php if ($informations) { ?>
+      <div class="col-sm-3">
+        <h5>Ajuda e Suporte</h5>
+        <ul class="list-unstyled">
+          <?php foreach ($informations as $information) { ?>
+          <li><a href="<?php echo $information['href']; ?>"><?php echo $information['title']; ?></a></li>
+          <?php } ?>
+        </ul>
+      </div>
+      <?php } ?>
+      <div class="col-sm-5">
+        <h5>Atendimento</h5>
+        <p>de segunda a sexta</p>
+        <p>10Hrs às 18Hrs</p>
+        <p>(11) 95379-6206</p>
+        <p>hello@loristore.com.br</p>
+      </div>
+
+      <div class="col-sm-4" id="newsletter">
+        <i class="fa fa-envelope"></i><h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ASSINE NOSSA NEWSLETTER</h5>
+        <div class="form-group">
+          <input type="text" class="form-control form-control-lg" id="email" placeholder="E-mail">
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-default" style="width: 100%;" onclick="return regNewsletter();">Enviar</button>
+        </div>
+
+      </div>
+
+    </div>    
+
+  </div>
+
+</footer>
+
+<div class="row">
+  <div class="col-sm-12">
+    <p style="padding: 30px;font-size: 10px;text-align: center;" ><?php echo $powered; ?></p>
+  </div>
+</div>
+
+
+
+<script>
+  function regNewsletter()
+  {
+    var emailpattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    var email = $('#email').val();
+    if(email != "")
+    {
+      if(!emailpattern.test(email))
+      {
+        $("#text-danger-newsletter").remove();
+        $("#newsletter").first("div").removeClass("has-error");
+        $("#newsletter-email").append('<div class="text-danger" id="text-danger-newsletter">E-Mail preenchido incorretamente.</div>');
+        $("#newsletter").first("div").addClass("has-error");
+
+        return false;
+      }
+      else
+      {
+        $.ajax({
+          url: 'index.php?route=extension/module/newsletters/add',
+          type: 'post',
+          data: 'email=' + $('#txtemail').val(),
+          dataType: 'json',
+          async:false,
+
+          success: function(json) {
+
+            if (json.message == true) {
+              alert('Cadastrado com sucesso.');
+              window.location= "index.php";
+            }
+            else {
+              $("#text-danger-newsletter").remove();
+              $("#newsletter").first("div").removeClass("has-error");
+              $("#newsletter-email").append(json.message);
+              $("#newsletter").first("div").addClass("has-error");
+              console.log()
+            }
+          }
+        });
+        return false;
+      }
+    }
+    else
+    {
+
+      $("#text-danger-newsletter").remove();
+      $("#newsletter").first("div").removeClass("has-error");
+      $("#form-newsletter-error").append('<div class="text-danger" id="text-danger-newsletter">E-Mail preenchido incorretamente.</div>');
+      $("#newsletter").first("div").addClass("has-error");
+
+      return false;
+    }
+  }
+</script>
+
+
+</body></html>
+
+
+

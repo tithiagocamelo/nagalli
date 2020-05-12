@@ -1,0 +1,841 @@
+<?php
+
+/**
+* Autor: Thiago Camelo
+* Data: 12/2017
+*/
+class ControllerIntegrationUploadfiles extends Controller {
+
+	private $files = array();
+	private $language_id;
+
+	public function index() {
+
+		$this->language_id = (int)$this->config->get('config_language_id');
+		
+		$this->readFiles('categorias');
+		$this->category();
+		$this->files = array();
+
+
+		/*$this->readFiles('cadfab');
+		$this->manufacturer();
+		$this->files = array();*/
+		
+		/*$this->readFiles('opcoes');
+		$this->option();
+		$this->files = array();*/
+
+		$this->readFiles('unimedida');
+		$this->unimedida();
+		$this->files = array();
+
+		$this->readFiles('cadpro');
+		$this->product();
+		$this->files = array();
+
+
+		$obj['msg'] = 'ok';
+		
+		$data['resposta'] = json_encode($obj);
+
+		$this->response->setOutput($this->load->view('integration/uploadfiles', $data));
+
+	}
+
+
+
+
+	/**
+	 *	Autor: Thiago Camelo
+	 *	Data: 12/2017
+	 */
+	private function category() {
+
+		$this->load->model('integration/category');
+
+		//isset $this->files
+		foreach ($this->files as $file) {
+
+			$xml = simplexml_load_file($file);
+
+			foreach ($xml as $categoryXML) {
+
+				$cat = $categoryXML->category;
+				$cat_desc = $categoryXML->category_description;
+				
+				$categoryBD = $this->model_integration_category->getCategory($cat->category_id);
+
+				if(isset($categoryBD['category_id'])) {
+
+					$categoryBD['category_id'] = $cat->category_id;
+					$categoryBD['image'] = $cat->image;
+					$categoryBD['parent_id'] = $cat->parent_id;
+					$categoryBD['top'] = $cat->topo;
+					$categoryBD['column'] = $cat->column;
+					$categoryBD['sort_order'] = $cat->sort_order;
+					$categoryBD['status'] = $cat->status;					
+
+					$language_id = $this->language_id;
+
+					$categoryBD['category_description'][$language_id] = array(
+						'name' => str_replace('/', '-', $cat_desc->name),
+						'description' => $cat_desc->description,
+						'meta_title' => $cat_desc->name,
+						'meta_description' => $cat_desc->meta_description,
+						'meta_keyword' => $cat_desc->meta_keyword
+					);
+
+					// ['category_store'] >> aparentemente só existe se tiver mais de uma loja
+
+					if(isset($cat_desc->name)) {
+
+						$keyword = str_replace('/', '-', $cat_desc->name);
+						$keywordOK = $this->removeAcentos($keyword , '-');
+
+						$categoryBD['keyword'] = $keywordOK;
+
+					}
+
+					$this->model_integration_category->editCategory((int)$categoryBD['category_id'], $categoryBD);
+
+
+					
+				} else {
+
+					$categoryBD = array();
+
+					$categoryBD['category_id'] = $cat->category_id;
+					$categoryBD['image'] = $cat->image;
+					$categoryBD['parent_id'] = $cat->parent_id;
+					$categoryBD['top'] = $cat->topo;
+					$categoryBD['column'] = $cat->column;
+					$categoryBD['sort_order'] = $cat->sort_order;
+					$categoryBD['status'] = $cat->status;					
+
+					$language_id = $this->language_id;
+
+					$categoryBD['category_description'][$this->language_id] = array(
+						'name' => str_replace('/', '-', $cat_desc->name),
+						'description' => $cat_desc->description,
+						'meta_title' => $cat_desc->name,
+						'meta_description' => $cat_desc->meta_description,
+						'meta_keyword' => $cat_desc->meta_keyword
+					);
+		
+					// ['category_store'] >> aparentemente só existe se tiver mais de uma loja
+					
+					if(isset($cat_desc->name)) {
+
+						$keyword = str_replace('/', '-', $cat_desc->name);
+						$keywordOK = $this->removeAcentos($keyword , '-');
+
+						$categoryBD['keyword'] = $keywordOK;
+
+					}
+
+					$this->model_integration_category->addCategory($categoryBD);
+
+				}
+
+			}
+
+		}
+
+	}
+
+
+
+	/**
+	 *	Autor: Thiago Camelo
+	 *	Data: 12/2017
+	 */
+	private function manufacturer() {
+		
+		$this->load->model('integration/manufacturer');
+
+		//isset $this->files
+		foreach ($this->files as $file) {
+			
+			$xml = simplexml_load_file($file);
+
+			foreach ($xml as $manufacturerXML) {
+
+				$manufacturerDB = $this->model_integration_manufacturer->getManufacturer($manufacturerXML->manufacturer_id);
+
+				if (isset($manufacturerDB['manufacturer_id'])) {
+
+					$manufacturerDB['manufacturer_id'] = $manufacturerXML->manufacturer_id;
+					$manufacturerDB['name'] = $manufacturerXML->name;
+					$manufacturerDB['sort_order'] = 1;
+
+					$this->model_integration_manufacturer->editManufacturer($manufacturerXML->manufacturer_id, $manufacturerDB);
+					
+				} else {
+
+					var_dump($manufacturerXML->name);
+					
+					$manufacturerDB['manufacturer_id'] = $manufacturerXML->manufacturer_id;
+					$manufacturerDB['name'] = $manufacturerXML->name;
+					
+					$this->model_integration_manufacturer->addManufacturer($manufacturerDB);
+
+				}
+
+			}
+
+		}
+
+	}
+
+
+
+
+	/**
+	 *	Autor: Thiago Camelo
+	 *	Data: 12/2017
+	 */
+	private function option() {
+
+		$this->load->model('integration/option');
+
+		//isset $this->files
+		foreach ($this->files as $file) {
+			
+			$xml = simplexml_load_file($file);
+
+			foreach ($xml as $optionXML) {
+
+				$option = $optionXML->option;
+
+				$optionDB = $this->model_integration_option->getOption($option->option_id);
+
+				if (isset($optionDB['option_id'])) {
+					// cadastrado
+					
+
+					#proximo
+					$optionDB['type'] = $option->type;
+					$optionDB['sort_order'] = $option->sort_order;
+
+					
+					$option_desc = $optionXML->option_description;
+
+					$optionDB['option_description'] = array(
+						$option_desc->language_id => array(
+							$option_desc->name
+						)
+					);
+
+					
+					if(isset($optionXML->option_value)) {
+
+						$option_values = $optionXML->option_value;
+						
+						// $optionDB['option_value'] = array();
+
+						foreach ($option_values as $option_value) {
+						
+							$opt_value['option_value_id'] = $option_value->icodintopcoes;
+							$opt_value['image'] = $option_value->image;
+							$opt_value['sort_order'] = $option_value->sort_order;
+
+							
+							foreach ($optionXML->option_value_description as $opt_value_desc) {
+								
+								if ($opt_value_desc->icodintopcoes == $option_value->icodintopcoes) {
+									
+									$opt_val_desc = array(
+										$opt_value_desc->language_id => array(
+											'name' => $opt_value_desc->name
+										)
+									);
+
+									$opt_value['option_value_description'] = $opt_val_desc;
+
+								}
+
+							}
+							
+
+							$optionDB['option_value'][] = $opt_value;
+
+						}		
+
+					}
+
+					// update
+					$this->model_integration_option->editOption($optionDB['option_id'], $optionDB);
+
+				} else {
+					
+					// cadastrar
+					$optionDB['option_id'] = $option->option_id;
+					$optionDB['type'] = $option->type;
+					$optionDB['sort_order'] = $option->sort_order;
+
+					
+					$option_desc = $optionXML->option_description;
+
+					$optionDB['option_description'] = array(
+						$option_desc->language_id => array(
+							$option_desc->name
+						)
+					);
+
+					
+					if(isset($optionXML->option_value)) {
+
+						$option_values = $optionXML->option_value;
+						
+						// $optionDB['option_value'] = array();
+
+						foreach ($option_values as $option_value) {
+						
+							$opt_value['option_value_id'] = $option_value->icodintopcoes;
+							$opt_value['image'] = $option_value->image;
+							$opt_value['sort_order'] = $option_value->sort_order;
+
+							
+							foreach ($optionXML->option_value_description as $opt_value_desc) {
+								
+								if ($opt_value_desc->icodintopcoes == $option_value->icodintopcoes) {
+									
+									$opt_val_desc = array(
+										$opt_value_desc->language_id => array(
+											'name' => $opt_value_desc->name
+										)
+									);
+
+									$opt_value['option_value_description'] = $opt_val_desc;
+
+								}
+
+							}
+							
+
+							$optionDB['option_value'][] = $opt_value;
+
+						}		
+
+					}
+
+					// insert
+					$this->model_integration_option->addOption($optionDB);
+
+				}
+
+			}
+
+		}
+		
+	}
+
+
+
+
+
+	/**
+	 *	Autor: Thiago Camelo
+	 *	Data: 12/2017
+	 */
+	private function unimedida() {
+
+		$this->load->model('integration/length_class');
+
+		//isset $this->files
+		foreach ($this->files as $file) {
+			
+			$xml = simplexml_load_file($file);
+
+			foreach ($xml as $unidadeXML) {
+
+				$unidadeDB = $this->model_integration_length_class->getLengthClassDescriptionByUnit($unidadeXML->unit);
+
+				if (isset($unidadeDB['unit'])) {
+					
+					$unidadeDB['value'] = $unidadeXML->value;
+
+					$unidadeDB['length_class_description'][$this->language_id] = array(
+						'title' => $unidadeXML->title,
+						'unit' => $unidadeXML->unit
+					);
+
+					$this->model_integration_length_class->editLengthClass($unidadeDB['length_class_id'], $unidadeDB);					
+
+				} else {
+
+					$unidadeDB['value'] = $unidadeXML->value;
+
+					$unidadeDB['length_class_description'][$this->language_id] = array(
+						'title' => $unidadeXML->title,
+						'unit' => $unidadeXML->unit
+					);
+
+					$this->model_integration_length_class->addLengthClass($unidadeDB);
+				}				
+
+			}
+
+		}
+
+	}
+
+
+
+
+
+	private function product() {
+		
+		$this->load->model('integration/product');
+
+		//isset $this->files
+		foreach ($this->files as $file) {
+			
+			$xml = simplexml_load_file($file);
+
+			foreach ($xml as $productXML) {
+
+				$product = $productXML->product;
+				$product_descriptionXML = $productXML->product_description;
+				$product_images = $productXML->imagens->product_image;
+				$product_options = $productXML->produtos_relacionados->product_option;
+				$product_special = $productXML->product_special;
+
+
+				$productDB = $this->model_integration_product->getProduct($product->icodintprosis);
+
+				if (isset($productDB['product_id'])) {
+
+					$productDB['product_id'] = $product->product_id; //id do produto
+                    $productDB['model'] = $product->model; //referencia do produto que vai ser mostrado na loja
+                    $productDB['sku'] = $product->sku; //não é utlizado mais deve ser vazio
+                    $productDB['upc'] = $product->upc; //não é utlizado mais deve ser vazio
+                    $productDB['ean'] = $product->ean; //não é utlizado mais deve ser vazio
+                    $productDB['jan'] = $product->jan; //não é utlizado mais deve ser vazio
+                    $productDB['isbn'] = $product->isbn; //não é utlizado mais deve ser vazio
+                    $productDB['mpn'] = $product->mpn; //não é utlizado mais deve ser vazio
+                    $productDB['location'] = $product->location; //não é utlizado mais deve ser vazio         
+                    $productDB['quantity'] = $product->quantity; //quantidade de produto para o estoque que será apresentado na loja         
+                    $productDB['stock_status_id'] = $product->stock_status_id; //define a situação do estoque
+                    $productDB['image'] = $product->image; //imagem principal do produto
+                    $productDB['manufacturer_id'] = $product->manufacturer_id; //passar 1
+                    $productDB['shipping'] = $product->shipping; //passar 1
+                    $productDB['price'] = $product->price; //preço de venda do produto
+                    $productDB['points'] = $product->points; //pontos que ganha quando compra o produto para proxima compra, passar sempre 0
+                    $productDB['tax_class_id'] = $product->tax_class_id; //passar sempre 0 
+                    $productDB['date_available'] = $product->date_available; //está gerando a data atual quando gera o xml
+                    $productDB['weight'] = $product->weight; //peso
+                    $productDB['weight_class_id'] = $product->weight_class_id; //passar 1
+                    $productDB['length'] = $product->lenght; //comprimento
+                    $productDB['width'] = $product->width; //largura
+                    $productDB['height'] = $product->height; //altura
+                    $productDB['length_class_id'] = $product->lenght_class_id; //passar 1
+                    $productDB['subtract'] = $product->subtract; //passar 1
+                    $productDB['minimum'] = $product->minimum; //minimo de produtos pode ser comprado por produto
+                    $productDB['sort_order'] = $product->sort_order; //ordem que vai aparecer o produto
+                    $productDB['status'] = $product->status; //produto ativo ou não
+                    //$1; //produto ativo ou não
+                    $productDB['date_added'] = $product->date_added; //data que foi adicionado o produto
+                    //$productDB['date_modified'] = $product->date_modified; //data que foi modificado o produto
+                    
+                    $productDB['icodintprosis'] = $product->icodintprosis;
+                    $productDB['ccodprosis'] = $product->ccodprosis;
+                    $productDB['prodrel'] = $product->prodrel;
+
+                    
+
+                    $language_id = (int)$this->language_id;
+
+                    $nameX = $product_descriptionXML->name;
+                    $name = (array)$nameX;
+
+                    $descriptionX = $product_descriptionXML->description;
+                    $description = (array)$descriptionX;
+
+                    $tagX = $product_descriptionXML->tag;
+                    $tag = (array)$tagX;
+
+                    $meta_titleX = $product_descriptionXML->meta_title;
+                    $meta_title = (array)$meta_titleX;
+
+                    $meta_descriptionX = $product_descriptionXML->meta_description;
+                    $meta_description = (array)$meta_descriptionX;
+
+                    $meta_keywordX = $product_descriptionXML->meta_keyword;
+                    $meta_keyword = (array)$meta_keywordX;
+
+					
+					if(isset($name[0])) {
+                    	
+                    	$productDB['product_description'][$language_id]['name'] = $name[0];
+                    	                    
+	                    if(isset($description[0])) {
+	                    	$productDB['product_description'][$language_id]['description'] = $description[0];
+	                    } else{
+	                    	$productDB['product_description'][$language_id]['description'] = '';
+	                    }
+
+	                    if(isset($tag[0])) {
+	                    	$productDB['product_description'][$language_id]['tag'] = $tag[0];
+	                    } else {
+	                    	$productDB['product_description'][$language_id]['tag'] = '';
+	                    }
+
+	                    if(isset($meta_title[0])) {
+	                    	$productDB['product_description'][$language_id]['meta_title'] = $meta_title[0];
+	                    } else {
+	                    	$productDB['product_description'][$language_id]['meta_title'] = '';
+	                    }
+
+	                    if(isset($meta_description[0])) {
+	                    	$productDB['product_description'][$language_id]['meta_description'] = $meta_description[0];
+	                    } else {
+							$productDB['product_description'][$language_id]['meta_description'] = '';
+	                    }
+
+	                    if(isset($meta_keyword[0])) {
+	                    	$productDB['product_description'][$language_id]['meta_keyword'] = $meta_keyword[0];
+	                    } else {
+	                    	$productDB['product_description'][$language_id]['meta_keyword'] = '';
+	                    }
+
+	                }
+
+	                
+
+                    $productDB['product_store'][] = 0;
+
+                    // $productDB['product_attribute']
+                    
+
+                    /*$productDB['product_option']
+
+                    foreach ($product_options as $product_option) {
+
+                    	'product_option_id' 
+                    	'type'
+                    	'option_id'
+                    	'required'
+
+                    	'product_option_value' 
+                    	
+                    } */
+                    
+
+                    // $productDB['product_discount']
+
+
+                    if (isset($product_special->customer_group_id)) {
+                        $productDB['product_special'] = array(
+                        	'customer_group_id' => $product_special->customer_group_id,
+                        	'priority' => '1',
+                        	'price' => $product_special->price,
+                        	'date_start' => $product_special->date_start,
+                        	'date_end' => $product_special->date_end
+                        );
+                    }
+                    
+                    
+                    if (isset($product_images)) {
+                    
+                        foreach ($product_images as $imagem) {
+                        	
+                        	$foto = array(
+                            	'image' => $imagem->image,
+                            	'sort_order' => $imagem->sort_order,
+                            	'cimagem' => $imagem->cimagem
+                            );
+
+                        	$productDB['product_image'][] = $foto;
+                        }
+
+                    }
+
+                    // $productDB['product_download']
+
+
+                    
+                    if (isset($produto->product_to_category)) {
+                        foreach ($produto->product_to_category as $item) {
+                            $productDB['product_category'][] = $item->category_id;
+                        }
+                    }
+
+
+
+                    // $productDB['product_filter']
+                    // $productDB['product_related']
+                    // $productDB['product_reward']
+                    // $productDB['product_layout']
+
+                    $keyword = str_replace('/', '-', $product->model);                            
+                    //$productDB['keyword'] = removeAcentos($keyword, '-');
+
+                    // $productDB['product_recurring']
+
+                    // $this->model_integration_product->editProduct($product->product_id, $productDB);
+
+
+
+				} else {
+
+					$productDB['product_id'] = $product->product_id; //id do produto
+                    $productDB['model'] = $product->model; //referencia do produto que vai ser mostrado na loja
+                    $productDB['sku'] = $product->sku; //não é utlizado mais deve ser vazio
+                    $productDB['upc'] = $product->upc; //não é utlizado mais deve ser vazio
+                    $productDB['ean'] = $product->ean; //não é utlizado mais deve ser vazio
+                    $productDB['jan'] = $product->jan; //não é utlizado mais deve ser vazio
+                    $productDB['isbn'] = $product->isbn; //não é utlizado mais deve ser vazio
+                    $productDB['mpn'] = $product->mpn; //não é utlizado mais deve ser vazio
+                    $productDB['location'] = $product->location; //não é utlizado mais deve ser vazio         
+                    $productDB['quantity'] = $product->quantity; //quantidade de produto para o estoque que será apresentado na loja         
+                    $productDB['stock_status_id'] = $product->stock_status_id; //define a situação do estoque
+                    $productDB['image'] = $product->image; //imagem principal do produto
+                    $productDB['manufacturer_id'] = $product->manufacturer_id; //passar 1
+                    $productDB['shipping'] = $product->shipping; //passar 1
+                    $productDB['price'] = $product->price; //preço de venda do produto
+                    $productDB['points'] = $product->points; //pontos que ganha quando compra o produto para proxima compra, passar sempre 0
+                    $productDB['tax_class_id'] = $product->tax_class_id; //passar sempre 0 
+                    $productDB['date_available'] = $product->date_available; //está gerando a data atual quando gera o xml
+                    $productDB['weight'] = $product->weight; //peso
+                    $productDB['weight_class_id'] = $product->weight_class_id; //passar 1
+                    $productDB['length'] = $product->lenght; //comprimento
+                    $productDB['width'] = $product->width; //largura
+                    $productDB['height'] = $product->height; //altura
+                    $productDB['length_class_id'] = $product->lenght_class_id; //passar 1
+                    $productDB['subtract'] = $product->subtract; //passar 1
+                    $productDB['minimum'] = $product->minimum; //minimo de produtos pode ser comprado por produto
+                    $productDB['sort_order'] = $product->sort_order; //ordem que vai aparecer o produto
+                    $productDB['status'] = $product->status; //produto ativo ou não
+                    //$1; //produto ativo ou não
+                    $productDB['date_added'] = $product->date_added; //data que foi adicionado o produto
+                    //$productDB['date_modified'] = $product->date_modified; //data que foi modificado o produto
+                    
+                    $productDB['icodintprosis'] = $product->icodintprosis;
+                    $productDB['ccodprosis'] = $product->ccodprosis;
+                    $productDB['prodrel'] = $product->prodrel;
+
+                    
+                    $language_id = (int)$this->language_id;
+
+                    $nameX = $product_descriptionXML->name;
+                    $name = (array)$nameX;
+
+                    $descriptionX = $product_descriptionXML->description;
+                    $description = (array)$descriptionX;
+
+                    $tagX = $product_descriptionXML->tag;
+                    $tag = (array)$tagX;
+
+                    $meta_titleX = $product_descriptionXML->meta_title;
+                    $meta_title = (array)$meta_titleX;
+
+                    $meta_descriptionX = $product_descriptionXML->meta_description;
+                    $meta_description = (array)$meta_descriptionX;
+
+                    $meta_keywordX = $product_descriptionXML->meta_keyword;
+                    $meta_keyword = (array)$meta_keywordX;
+
+                    if(isset($name[0])) {
+                    	
+                    	$productDB['product_description'][$language_id]['name'] = $name[0];
+                    
+	                    
+	                    if(isset($description[0])) {
+	                    	$productDB['product_description'][$language_id]['description'] = $description[0];
+	                    } else{
+	                    	$productDB['product_description'][$language_id]['description'] = $name[0];
+	                    }
+
+	                    if(isset($tag[0])) {
+	                    	$productDB['product_description'][$language_id]['tag'] = $tag[0];
+	                    } else {
+	                    	$productDB['product_description'][$language_id]['tag'] = '';
+	                    }
+
+	                    if(isset($meta_title[0])) {
+	                    	$productDB['product_description'][$language_id]['meta_title'] = $meta_title[0];
+	                    } else {
+	                    	$productDB['product_description'][$language_id]['meta_title'] = $name[0];
+	                    }
+
+	                    if(isset($meta_description[0])) {
+	                    	$productDB['product_description'][$language_id]['meta_description'] = $meta_description[0];
+	                    } else {
+							$productDB['product_description'][$language_id]['meta_description'] = '';
+	                    }
+
+	                    if(isset($meta_keyword[0])) {
+	                    	$productDB['product_description'][$language_id]['meta_keyword'] = $meta_keyword[0];
+	                    } else {
+	                    	$productDB['product_description'][$language_id]['meta_keyword'] = '';
+	                    }	                   
+
+	                }
+
+
+
+                    $productDB['product_store'] = array('0');
+
+                    // $productDB['product_attribute']
+                    
+
+                    // $productDB['product_option']
+
+                    // foreach ($product_options as $product_option) {
+
+                    // 	'product_option_id' 
+                    // 	'type'
+                    // 	'option_id'
+                    // 	'required'
+
+                    // 	'product_option_value' 
+                    	
+                    // }
+
+
+                    // $productDB['product_discount']
+
+
+                    if (isset($product_special->customer_group_id)) {
+                        $productDB['product_special'] = array(
+                        	'customer_group_id' => $product_special->customer_group_id,
+                        	'priority' => '1',
+                        	'price' => $product_special->price,
+                        	'date_start' => $product_special->date_start,
+                        	'date_end' => $product_special->date_end,
+                        );
+                    }
+                    
+                    
+                    if (isset($product_images)) {
+                    
+                        foreach ($product_images as $imagem) {
+                        	
+                        	$foto = array(
+                            	'image' => $imagem->image,
+                            	'sort_order' => $imagem->sort_order,
+                            	'cimagem' => $imagem->cimagem
+                            );
+
+                        	$productDB['product_image'][] = $foto;
+                        }
+
+                    }
+
+
+                    // $productDB['product_download']
+
+
+                    
+                    if (isset($produto->product_to_category)) {
+                        foreach ($produto->product_to_category as $item) {
+                            $productDB['product_category'][] = $item->category_id;
+                        }
+                    }
+
+					
+
+                    // $productDB['product_filter']
+                    // $productDB['product_related']
+                    // $productDB['product_reward']
+                    // $productDB['product_layout']
+
+                    $keyword = str_replace('/', '-', $product->model);                            
+                    //$productDB['keyword'] = $this->removeAcentos($keyword, '-');
+
+                    // $productDB['product_recurring']
+
+
+                    $id = $this->model_integration_product->addProduct($productDB);
+                    
+
+				}
+				
+
+			}
+
+		}
+
+	}
+
+
+
+
+
+
+	/**
+	 *	Autor: Thiago Camelo
+	 *	Data: 12/2017
+	 */
+	private function readFiles($pasta) {
+		
+		$caminho = DIR_ROOT."xml/".$pasta;
+
+		if(is_dir($caminho)) {
+
+			$diretorio = dir($caminho);
+
+			while ($arquivo = $diretorio->read()) {
+
+				$extensao = pathinfo($arquivo, PATHINFO_EXTENSION);
+
+				if ($extensao == "xml") {
+
+					if (file_exists($caminho . '/' . $arquivo)) {
+
+						$this->files[] = $caminho . '/' . $arquivo;
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	/*
+	* Autor: Paulo Amigoni
+	*/
+	private function removeAcentos($string, $slug = false) {
+		
+		$string = strtolower($string);
+
+		// Código ASCII das vogais
+		$ascii['a'] = range(224, 230);
+		$ascii['e'] = range(232, 235);
+		$ascii['i'] = range(236, 239);
+		$ascii['o'] = array_merge(range(242, 246), array(240, 248));
+		$ascii['u'] = range(249, 252);
+
+		// Código ASCII dos outros caracteres
+		$ascii['b'] = array(223);
+		$ascii['c'] = array(231);
+		$ascii['d'] = array(208);
+		$ascii['n'] = array(241);
+		$ascii['y'] = array(253, 255);
+
+		foreach ($ascii as $key=>$item) {
+			$acentos = '';
+			foreach ($item AS $codigo) $acentos .= chr($codigo);
+			$troca[$key] = '/['.$acentos.']/i';
+		}
+
+		$string = preg_replace(array_values($troca), array_keys($troca), $string);
+
+		// Slug?
+		if ($slug) {
+			// Troca tudo que não for letra ou número por um caractere ($slug)
+			$string = preg_replace('/[^a-z0-9]/i', $slug, $string);
+			// Tira os caracteres ($slug) repetidos
+			$string = preg_replace('/' . $slug . '{2,}/i', $slug, $string);
+			$string = trim($string, $slug);
+		}
+
+		return $string;
+	}
+
+}

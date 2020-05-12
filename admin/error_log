@@ -1,0 +1,206 @@
+[23-Jul-2019 11:54:58 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 20480 bytes) in /home/nagalli/public_html/atacado/system/library/image.php on line 26
+[23-Jul-2019 11:55:00 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 20480 bytes) in /home/nagalli/public_html/atacado/system/library/image.php on line 26
+[23-Jul-2019 11:55:04 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 20480 bytes) in /home/nagalli/public_html/atacado/system/library/image.php on line 26
+[23-Jul-2019 11:55:08 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 20480 bytes) in /home/nagalli/public_html/atacado/system/library/image.php on line 26
+[23-Jul-2019 11:55:16 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 20480 bytes) in /home/nagalli/public_html/atacado/system/library/image.php on line 26
+[29-Jul-2019 16:58:46 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[29-Jul-2019 17:33:53 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[30-Jul-2019 19:10:04 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1203): User nagalli_user already has more than 'max_user_connections' active connections in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 7
+[30-Jul-2019 19:10:04 UTC] PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 10
+[30-Jul-2019 19:10:04 UTC] PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 10
+[30-Jul-2019 19:10:04 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error: <br />Error No: ' in /home/nagalli/public_html/atacado/system/library/db/mysqli.php:10
+Stack trace:
+#0 /home/nagalli/public_html/atacado/system/library/db.php(9): DB\MySQLi->__construct('localhost', 'nagalli_user', 'l#VJ$L$4])Q%E%P...', 'nagalli_loja', '3306')
+#1 /home/nagalli/public_html/atacado/system/framework.php(157): DB->__construct('mysqli', 'localhost', 'nagalli_user', 'l#VJ$L$4])Q%E%P...', 'nagalli_loja', '3306')
+#2 /home/nagalli/public_html/atacado/system/startup.php(124): require_once('/home/nagalli/p...')
+#3 /home/nagalli/public_html/atacado/admin/index.php(19): start('admin')
+#4 {main}
+  thrown in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 10
+[30-Jul-2019 19:10:06 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1203): User nagalli_user already has more than 'max_user_connections' active connections in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 7
+[30-Jul-2019 19:10:06 UTC] PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 10
+[30-Jul-2019 19:10:06 UTC] PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 10
+[30-Jul-2019 19:10:06 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error: <br />Error No: ' in /home/nagalli/public_html/atacado/system/library/db/mysqli.php:10
+Stack trace:
+#0 /home/nagalli/public_html/atacado/system/library/db.php(9): DB\MySQLi->__construct('localhost', 'nagalli_user', 'l#VJ$L$4])Q%E%P...', 'nagalli_loja', '3306')
+#1 /home/nagalli/public_html/atacado/system/framework.php(157): DB->__construct('mysqli', 'localhost', 'nagalli_user', 'l#VJ$L$4])Q%E%P...', 'nagalli_loja', '3306')
+#2 /home/nagalli/public_html/atacado/system/startup.php(124): require_once('/home/nagalli/p...')
+#3 /home/nagalli/public_html/atacado/admin/index.php(19): start('admin')
+#4 {main}
+  thrown in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 10
+[30-Jul-2019 19:10:08 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1203): User nagalli_user already has more than 'max_user_connections' active connections in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 7
+[30-Jul-2019 19:10:08 UTC] PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 10
+[30-Jul-2019 19:10:08 UTC] PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 10
+[30-Jul-2019 19:10:08 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error: <br />Error No: ' in /home/nagalli/public_html/atacado/system/library/db/mysqli.php:10
+Stack trace:
+#0 /home/nagalli/public_html/atacado/system/library/db.php(9): DB\MySQLi->__construct('localhost', 'nagalli_user', 'l#VJ$L$4])Q%E%P...', 'nagalli_loja', '3306')
+#1 /home/nagalli/public_html/atacado/system/framework.php(157): DB->__construct('mysqli', 'localhost', 'nagalli_user', 'l#VJ$L$4])Q%E%P...', 'nagalli_loja', '3306')
+#2 /home/nagalli/public_html/atacado/system/startup.php(124): require_once('/home/nagalli/p...')
+#3 /home/nagalli/public_html/atacado/admin/index.php(19): start('admin')
+#4 {main}
+  thrown in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 10
+[30-Jul-2019 19:10:09 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1203): User nagalli_user already has more than 'max_user_connections' active connections in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 7
+[30-Jul-2019 19:10:09 UTC] PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 10
+[30-Jul-2019 19:10:09 UTC] PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 10
+[30-Jul-2019 19:10:09 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error: <br />Error No: ' in /home/nagalli/public_html/atacado/system/library/db/mysqli.php:10
+Stack trace:
+#0 /home/nagalli/public_html/atacado/system/library/db.php(9): DB\MySQLi->__construct('localhost', 'nagalli_user', 'l#VJ$L$4])Q%E%P...', 'nagalli_loja', '3306')
+#1 /home/nagalli/public_html/atacado/system/framework.php(157): DB->__construct('mysqli', 'localhost', 'nagalli_user', 'l#VJ$L$4])Q%E%P...', 'nagalli_loja', '3306')
+#2 /home/nagalli/public_html/atacado/system/startup.php(124): require_once('/home/nagalli/p...')
+#3 /home/nagalli/public_html/atacado/admin/index.php(19): start('admin')
+#4 {main}
+  thrown in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 10
+[30-Jul-2019 19:10:10 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1203): User nagalli_user already has more than 'max_user_connections' active connections in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 7
+[30-Jul-2019 19:10:10 UTC] PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 10
+[30-Jul-2019 19:10:10 UTC] PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 10
+[30-Jul-2019 19:10:10 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error: <br />Error No: ' in /home/nagalli/public_html/atacado/system/library/db/mysqli.php:10
+Stack trace:
+#0 /home/nagalli/public_html/atacado/system/library/db.php(9): DB\MySQLi->__construct('localhost', 'nagalli_user', 'l#VJ$L$4])Q%E%P...', 'nagalli_loja', '3306')
+#1 /home/nagalli/public_html/atacado/system/framework.php(157): DB->__construct('mysqli', 'localhost', 'nagalli_user', 'l#VJ$L$4])Q%E%P...', 'nagalli_loja', '3306')
+#2 /home/nagalli/public_html/atacado/system/startup.php(124): require_once('/home/nagalli/p...')
+#3 /home/nagalli/public_html/atacado/admin/index.php(19): start('admin')
+#4 {main}
+  thrown in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 10
+[19-Aug-2019 12:31:22 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[19-Aug-2019 12:32:20 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[10-Dec-2019 19:43:56 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[11-Dec-2019 17:53:25 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[11-Dec-2019 20:50:54 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[11-Dec-2019 20:51:38 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[11-Dec-2019 20:53:22 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[11-Dec-2019 20:55:15 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[30-Jan-2020 19:21:54 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[04-Mar-2020 19:03:34 UTC] PHP Warning:  Error while sending QUERY packet. PID=20862 in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 18
+[04-Mar-2020 19:03:34 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error: MySQL server has gone away<br />Error No: 2006<br />SELECT * FROM oc_setting WHERE store_id = '0'' in /home/nagalli/public_html/atacado/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/nagalli/public_html/atacado/system/library/db.php(16): DB\MySQLi->query('SELECT * FROM o...', Array)
+#1 /home/nagalli/public_html/atacado/admin/controller/startup/startup.php(5): DB->query('SELECT * FROM o...')
+#2 [internal function]: ControllerStartupStartup->index()
+#3 /home/nagalli/public_html/atacado/system/storage/modification/system/engine/action.php(51): call_user_func_array(Array, Array)
+#4 /home/nagalli/public_html/atacado/system/engine/front.php(59): Action->execute(Object(Registry))
+#5 /home/nagalli/public_html/atacado/system/engine/front.php(26): Front->execute(Object(Action))
+#6 /home/nagalli/public_html/atacado/system/framework.php(224): Front->dispatch(Object(Action), Object(Action))
+#7 /home/nagalli/public_html/atacado/system/startup.php(124): require_once in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 40
+[04-Mar-2020 19:03:34 UTC] PHP Warning:  Error while sending QUERY packet. PID=20851 in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 18
+[04-Mar-2020 19:03:34 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error: MySQL server has gone away<br />Error No: 2006<br />SELECT * FROM oc_setting WHERE store_id = '0'' in /home/nagalli/public_html/atacado/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/nagalli/public_html/atacado/system/library/db.php(16): DB\MySQLi->query('SELECT * FROM o...', Array)
+#1 /home/nagalli/public_html/atacado/admin/controller/startup/startup.php(5): DB->query('SELECT * FROM o...')
+#2 [internal function]: ControllerStartupStartup->index()
+#3 /home/nagalli/public_html/atacado/system/storage/modification/system/engine/action.php(51): call_user_func_array(Array, Array)
+#4 /home/nagalli/public_html/atacado/system/engine/front.php(59): Action->execute(Object(Registry))
+#5 /home/nagalli/public_html/atacado/system/engine/front.php(26): Front->execute(Object(Action))
+#6 /home/nagalli/public_html/atacado/system/framework.php(224): Front->dispatch(Object(Action), Object(Action))
+#7 /home/nagalli/public_html/atacado/system/startup.php(124): require_once in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 40
+[04-Mar-2020 19:25:46 UTC] PHP Warning:  Error while sending QUERY packet. PID=21575 in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 18
+[04-Mar-2020 19:25:46 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error: MySQL server has gone away<br />Error No: 2006<br />SELECT * FROM oc_setting WHERE store_id = '0'' in /home/nagalli/public_html/atacado/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/nagalli/public_html/atacado/system/library/db.php(16): DB\MySQLi->query('SELECT * FROM o...', Array)
+#1 /home/nagalli/public_html/atacado/admin/controller/startup/startup.php(5): DB->query('SELECT * FROM o...')
+#2 [internal function]: ControllerStartupStartup->index()
+#3 /home/nagalli/public_html/atacado/system/storage/modification/system/engine/action.php(51): call_user_func_array(Array, Array)
+#4 /home/nagalli/public_html/atacado/system/engine/front.php(59): Action->execute(Object(Registry))
+#5 /home/nagalli/public_html/atacado/system/engine/front.php(26): Front->execute(Object(Action))
+#6 /home/nagalli/public_html/atacado/system/framework.php(224): Front->dispatch(Object(Action), Object(Action))
+#7 /home/nagalli/public_html/atacado/system/startup.php(124): require_once in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 40
+[04-Mar-2020 19:25:46 UTC] PHP Warning:  Error while sending QUERY packet. PID=21583 in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 18
+[04-Mar-2020 19:25:46 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error: MySQL server has gone away<br />Error No: 2006<br />SELECT * FROM oc_setting WHERE store_id = '0'' in /home/nagalli/public_html/atacado/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/nagalli/public_html/atacado/system/library/db.php(16): DB\MySQLi->query('SELECT * FROM o...', Array)
+#1 /home/nagalli/public_html/atacado/admin/controller/startup/startup.php(5): DB->query('SELECT * FROM o...')
+#2 [internal function]: ControllerStartupStartup->index()
+#3 /home/nagalli/public_html/atacado/system/storage/modification/system/engine/action.php(51): call_user_func_array(Array, Array)
+#4 /home/nagalli/public_html/atacado/system/engine/front.php(59): Action->execute(Object(Registry))
+#5 /home/nagalli/public_html/atacado/system/engine/front.php(26): Front->execute(Object(Action))
+#6 /home/nagalli/public_html/atacado/system/framework.php(224): Front->dispatch(Object(Action), Object(Action))
+#7 /home/nagalli/public_html/atacado/system/startup.php(124): require_once in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 40
+[04-Mar-2020 19:25:46 UTC] PHP Warning:  Error while sending QUERY packet. PID=21580 in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 18
+[04-Mar-2020 19:25:46 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error: MySQL server has gone away<br />Error No: 2006<br />SELECT * FROM oc_setting WHERE store_id = '0'' in /home/nagalli/public_html/atacado/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/nagalli/public_html/atacado/system/library/db.php(16): DB\MySQLi->query('SELECT * FROM o...', Array)
+#1 /home/nagalli/public_html/atacado/admin/controller/startup/startup.php(5): DB->query('SELECT * FROM o...')
+#2 [internal function]: ControllerStartupStartup->index()
+#3 /home/nagalli/public_html/atacado/system/storage/modification/system/engine/action.php(51): call_user_func_array(Array, Array)
+#4 /home/nagalli/public_html/atacado/system/engine/front.php(59): Action->execute(Object(Registry))
+#5 /home/nagalli/public_html/atacado/system/engine/front.php(26): Front->execute(Object(Action))
+#6 /home/nagalli/public_html/atacado/system/framework.php(224): Front->dispatch(Object(Action), Object(Action))
+#7 /home/nagalli/public_html/atacado/system/startup.php(124): require_once in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 40
+[04-Mar-2020 19:25:46 UTC] PHP Warning:  Error while sending QUERY packet. PID=21578 in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 18
+[04-Mar-2020 19:25:46 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error: MySQL server has gone away<br />Error No: 2006<br />SELECT * FROM oc_setting WHERE store_id = '0'' in /home/nagalli/public_html/atacado/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/nagalli/public_html/atacado/system/library/db.php(16): DB\MySQLi->query('SELECT * FROM o...', Array)
+#1 /home/nagalli/public_html/atacado/admin/controller/startup/startup.php(5): DB->query('SELECT * FROM o...')
+#2 [internal function]: ControllerStartupStartup->index()
+#3 /home/nagalli/public_html/atacado/system/storage/modification/system/engine/action.php(51): call_user_func_array(Array, Array)
+#4 /home/nagalli/public_html/atacado/system/engine/front.php(59): Action->execute(Object(Registry))
+#5 /home/nagalli/public_html/atacado/system/engine/front.php(26): Front->execute(Object(Action))
+#6 /home/nagalli/public_html/atacado/system/framework.php(224): Front->dispatch(Object(Action), Object(Action))
+#7 /home/nagalli/public_html/atacado/system/startup.php(124): require_once in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 40
+[04-Mar-2020 19:25:46 UTC] PHP Warning:  Error while sending QUERY packet. PID=21592 in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 18
+[04-Mar-2020 19:25:46 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error: MySQL server has gone away<br />Error No: 2006<br />SELECT * FROM oc_setting WHERE store_id = '0'' in /home/nagalli/public_html/atacado/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/nagalli/public_html/atacado/system/library/db.php(16): DB\MySQLi->query('SELECT * FROM o...', Array)
+#1 /home/nagalli/public_html/atacado/admin/controller/startup/startup.php(5): DB->query('SELECT * FROM o...')
+#2 [internal function]: ControllerStartupStartup->index()
+#3 /home/nagalli/public_html/atacado/system/storage/modification/system/engine/action.php(51): call_user_func_array(Array, Array)
+#4 /home/nagalli/public_html/atacado/system/engine/front.php(59): Action->execute(Object(Registry))
+#5 /home/nagalli/public_html/atacado/system/engine/front.php(26): Front->execute(Object(Action))
+#6 /home/nagalli/public_html/atacado/system/framework.php(224): Front->dispatch(Object(Action), Object(Action))
+#7 /home/nagalli/public_html/atacado/system/startup.php(124): require_once in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 40
+[04-Mar-2020 19:25:46 UTC] PHP Warning:  Error while sending QUERY packet. PID=21587 in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 18
+[04-Mar-2020 19:25:46 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error: MySQL server has gone away<br />Error No: 2006<br />SELECT * FROM oc_setting WHERE store_id = '0'' in /home/nagalli/public_html/atacado/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/nagalli/public_html/atacado/system/library/db.php(16): DB\MySQLi->query('SELECT * FROM o...', Array)
+#1 /home/nagalli/public_html/atacado/admin/controller/startup/startup.php(5): DB->query('SELECT * FROM o...')
+#2 [internal function]: ControllerStartupStartup->index()
+#3 /home/nagalli/public_html/atacado/system/storage/modification/system/engine/action.php(51): call_user_func_array(Array, Array)
+#4 /home/nagalli/public_html/atacado/system/engine/front.php(59): Action->execute(Object(Registry))
+#5 /home/nagalli/public_html/atacado/system/engine/front.php(26): Front->execute(Object(Action))
+#6 /home/nagalli/public_html/atacado/system/framework.php(224): Front->dispatch(Object(Action), Object(Action))
+#7 /home/nagalli/public_html/atacado/system/startup.php(124): require_once in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 40
+[04-Mar-2020 19:25:46 UTC] PHP Warning:  Error while sending QUERY packet. PID=21577 in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 18
+[04-Mar-2020 19:25:46 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error: MySQL server has gone away<br />Error No: 2006<br />SELECT * FROM oc_setting WHERE store_id = '0'' in /home/nagalli/public_html/atacado/system/library/db/mysqli.php:40
+Stack trace:
+#0 /home/nagalli/public_html/atacado/system/library/db.php(16): DB\MySQLi->query('SELECT * FROM o...', Array)
+#1 /home/nagalli/public_html/atacado/admin/controller/startup/startup.php(5): DB->query('SELECT * FROM o...')
+#2 [internal function]: ControllerStartupStartup->index()
+#3 /home/nagalli/public_html/atacado/system/storage/modification/system/engine/action.php(51): call_user_func_array(Array, Array)
+#4 /home/nagalli/public_html/atacado/system/engine/front.php(59): Action->execute(Object(Registry))
+#5 /home/nagalli/public_html/atacado/system/engine/front.php(26): Front->execute(Object(Action))
+#6 /home/nagalli/public_html/atacado/system/framework.php(224): Front->dispatch(Object(Action), Object(Action))
+#7 /home/nagalli/public_html/atacado/system/startup.php(124): require_once in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 40
+[14-Apr-2020 14:31:54 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1203): User nagalli_user already has more than 'max_user_connections' active connections in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 7
+[14-Apr-2020 14:31:54 UTC] PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 10
+[14-Apr-2020 14:31:54 UTC] PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 10
+[14-Apr-2020 14:31:54 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error: <br />Error No: ' in /home/nagalli/public_html/atacado/system/library/db/mysqli.php:10
+Stack trace:
+#0 /home/nagalli/public_html/atacado/system/library/db.php(9): DB\MySQLi->__construct('localhost', 'nagalli_user', 'l#VJ$L$4])Q%E%P...', 'nagalli_loja', '3306')
+#1 /home/nagalli/public_html/atacado/system/framework.php(157): DB->__construct('mysqli', 'localhost', 'nagalli_user', 'l#VJ$L$4])Q%E%P...', 'nagalli_loja', '3306')
+#2 /home/nagalli/public_html/atacado/system/startup.php(124): require_once('/home/nagalli/p...')
+#3 /home/nagalli/public_html/atacado/admin/index.php(19): start('admin')
+#4 {main}
+  thrown in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 10
+[14-Apr-2020 14:31:58 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1203): User nagalli_user already has more than 'max_user_connections' active connections in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 7
+[14-Apr-2020 14:31:58 UTC] PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 10
+[14-Apr-2020 14:31:58 UTC] PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 10
+[14-Apr-2020 14:31:58 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error: <br />Error No: ' in /home/nagalli/public_html/atacado/system/library/db/mysqli.php:10
+Stack trace:
+#0 /home/nagalli/public_html/atacado/system/library/db.php(9): DB\MySQLi->__construct('localhost', 'nagalli_user', 'l#VJ$L$4])Q%E%P...', 'nagalli_loja', '3306')
+#1 /home/nagalli/public_html/atacado/system/framework.php(157): DB->__construct('mysqli', 'localhost', 'nagalli_user', 'l#VJ$L$4])Q%E%P...', 'nagalli_loja', '3306')
+#2 /home/nagalli/public_html/atacado/system/startup.php(124): require_once('/home/nagalli/p...')
+#3 /home/nagalli/public_html/atacado/admin/index.php(19): start('admin')
+#4 {main}
+  thrown in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 10
+[14-Apr-2020 14:32:04 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1203): User nagalli_user already has more than 'max_user_connections' active connections in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 7
+[14-Apr-2020 14:32:04 UTC] PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 10
+[14-Apr-2020 14:32:04 UTC] PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 10
+[14-Apr-2020 14:32:04 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error: <br />Error No: ' in /home/nagalli/public_html/atacado/system/library/db/mysqli.php:10
+Stack trace:
+#0 /home/nagalli/public_html/atacado/system/library/db.php(9): DB\MySQLi->__construct('localhost', 'nagalli_user', 'l#VJ$L$4])Q%E%P...', 'nagalli_loja', '3306')
+#1 /home/nagalli/public_html/atacado/system/framework.php(157): DB->__construct('mysqli', 'localhost', 'nagalli_user', 'l#VJ$L$4])Q%E%P...', 'nagalli_loja', '3306')
+#2 /home/nagalli/public_html/atacado/system/startup.php(124): require_once('/home/nagalli/p...')
+#3 /home/nagalli/public_html/atacado/admin/index.php(19): start('admin')
+#4 {main}
+  thrown in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 10
+[14-Apr-2020 18:59:39 UTC] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 96 bytes) in /home/nagalli/public_html/atacado/system/library/db/mysqli.php on line 24
+[11-May-2020 12:20:42 America/Chicago] PHP Warning:  require_once(/home/nagalli/public_html/novaloja/system/startup.php): failed to open stream: No such file or directory in /home2/metaf215/public_html/nagalli/admin/index.php on line 17
+[11-May-2020 12:20:42 America/Chicago] PHP Fatal error:  require_once(): Failed opening required '/home/nagalli/public_html/novaloja/system/startup.php' (include_path='.:/opt/php54/lib/php') in /home2/metaf215/public_html/nagalli/admin/index.php on line 17

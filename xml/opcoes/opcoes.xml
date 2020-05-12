@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<cadopcoes>
+<opcoes>
+	<option>
+		<option_id>2</option_id>
+		<type>radio</type>
+		<sort_order>1</sort_order>
+	</option>
+
+	<option_description>
+		<option_id>2</option_id>
+		<name>TAMANHO</name>
+		<language_id>2</language_id>
+	</option_description>
+
+	<option_value>
+		<option_id>2</option_id>
+		<image>no_image.jpg</image>
+		<sort_order>1</sort_order>
+		<icodintopcoes>1</icodintopcoes>
+	</option_value>
+
+	<option_value>
+		<option_id>2</option_id>
+		<image>no_image.jpg</image>
+		<sort_order>2</sort_order>
+		<icodintopcoes>2</icodintopcoes>
+	</option_value>
+
+	<option_value_description>
+		<option_id>2</option_id>
+		<name>14</name>
+		<language_id>2</language_id>
+		<icodintopcoes>1</icodintopcoes>
+	</option_value_description>
+
+	<option_value_description>
+		<option_id>2</option_id>
+		<name>16</name>
+		<language_id>2</language_id>
+		<icodintopcoes>2</icodintopcoes>
+	</option_value_description>
+
+</opcoes>
+
+</cadopcoes>

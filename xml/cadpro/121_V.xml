@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<cadprodutos>
+<cadastroproduto>
+	<product>
+		<product_id>121</product_id>
+		<model>CJ15RNRUB</model>
+		<sku></sku>
+		<upc></upc>
+		<ean></ean>
+		<jan></jan>
+		<isbn></isbn>
+		<mpn></mpn>
+		<location></location>
+		<quantity>0</quantity>
+		<stock_status_id>5</stock_status_id>
+		<image>catalog/produtos/sem_foto.gif</image>
+		<manufacturer_id></manufacturer_id>
+		<shipping>1</shipping>
+		<price>119</price>
+		<points>0</points>
+		<tax_class_id>0</tax_class_id>
+		<date_available>2018-01-25 01:10:35</date_available>
+		<weight>0</weight>
+		<weight_class_id>1</weight_class_id>
+		<lenght>0</lenght>
+		<width>0</width>
+		<height>0</height>
+		<lenght_class_id>1</lenght_class_id>
+		<subtract>1</subtract>
+		<minimum>1</minimum>
+		<sort_order>1</sort_order>
+		<status>1</status>
+		<date_added>2018-01-25 01:10:35</date_added>
+		<date_modified>2018-02-09 01:35:06</date_modified>
+		<icodintprosis>112</icodintprosis>
+		<ccodprosis>CJ15RNRUB</ccodprosis>
+		<prodrel>N</prodrel>
+	</product>
+
+	<product_description>
+		<product_id>121</product_id>
+		<language_id>2</language_id>
+		<name>CONJUNTO GOTA RODIO NEGRO RUBELITA</name>
+		<description></description>
+		<meta_description>conjunto gota, rubelita, rodio negro</meta_description>
+		<meta_keyword>conjunto, rubelita</meta_keyword>
+		<tag></tag>
+	</product_description>
+
+	<imagens>
+		<product_image>
+			<product_id>121</product_id>
+			<image>catalog/produtos/sem_foto.gif</image>
+			<sort_order>1</sort_order>
+			<cimagem>1</cimagem>
+		</product_image>
+
+		<product_image>
+			<product_id>121</product_id>
+			<image>catalog/produtos/sem_foto.gif</image>
+			<sort_order>1</sort_order>
+			<cimagem>2</cimagem>
+		</product_image>
+
+		<product_image>
+			<product_id>121</product_id>
+			<image>catalog/produtos/sem_foto.gif</image>
+			<sort_order>1</sort_order>
+			<cimagem>3</cimagem>
+		</product_image>
+
+	</imagens>
+
+	<product_to_category>
+		<product_id>121</product_id>
+		<category_id>8</category_id>
+	</product_to_category>
+
+	<product_to_category>
+		<product_id>121</product_id>
+		<category_id>6</category_id>
+	</product_to_category>
+
+</cadastroproduto>
+
+</cadprodutos>

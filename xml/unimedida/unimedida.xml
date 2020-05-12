@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<unimedida>
+<length_class_description>
+	<language_id>2</language_id>
+	<title>PEÇA</title>
+	<unit>PC</unit>
+	<value>1</value>
+</length_class_description>
+
+<length_class_description>
+	<language_id>2</language_id>
+	<title>BARRA</title>
+	<unit>BR</unit>
+	<value>1</value>
+</length_class_description>
+
+<length_class_description>
+	<language_id>2</language_id>
+	<title>KILO</title>
+	<unit>KG</unit>
+	<value>1</value>
+</length_class_description>
+
+<length_class_description>
+	<language_id>2</language_id>
+	<title>[SEM DESCRIÇÃO]</title>
+	<unit>TL</unit>
+	<value>1</value>
+</length_class_description>
+
+<length_class_description>
+	<language_id>2</language_id>
+	<title>[SEM DESCRIÇÃO]</title>
+	<unit>TO</unit>
+	<value>1</value>
+</length_class_description>
+
+<length_class_description>
+	<language_id>2</language_id>
+	<title>UNIDADE</title>
+	<unit>UN</unit>
+	<value>1</value>
+</length_class_description>
+
+<length_class_description>
+	<language_id>2</language_id>
+	<title>CAIXA</title>
+	<unit>CX</unit>
+	<value>1</value>
+</length_class_description>
+
+<length_class_description>
+	<language_id>2</language_id>
+	<title>METRO LINEAR</title>
+	<unit>MT</unit>
+	<value>1</value>
+</length_class_description>
+
+<length_class_description>
+	<language_id>2</language_id>
+	<title>[SEM DESCRIÇÃO]</title>
+	<unit>PR</unit>
+	<value>1</value>
+</length_class_description>
+
+<length_class_description>
+	<language_id>2</language_id>
+	<title>LITRO</title>
+	<unit>LT</unit>
+	<value>1</value>
+</length_class_description>
+
+<length_class_description>
+	<language_id>2</language_id>
+	<title>MILHEIRO</title>
+	<unit>MIL</unit>
+	<value>1</value>
+</length_class_description>
+
+<length_class_description>
+	<language_id>2</language_id>
+	<title>[SEM DESCRIÇÃO]</title>
+	<unit>ML</unit>
+	<value>1</value>
+</length_class_description>
+
+<length_class_description>
+	<language_id>2</language_id>
+	<title>[SEM DESCRIÇÃO]</title>
+	<unit>TN</unit>
+	<value>1</value>
+</length_class_description>
+
+<length_class_description>
+	<language_id>2</language_id>
+	<title>LATA</title>
+	<unit>LAT</unit>
+	<value>1</value>
+</length_class_description>
+
+<length_class_description>
+	<language_id>2</language_id>
+	<title>[SEM DESCRIÇÃO]</title>
+	<unit>RT</unit>
+	<value>1</value>
+</length_class_description>
+
+<length_class_description>
+	<language_id>2</language_id>
+	<title>[SEM DESCRIÇÃO]</title>
+	<unit>LIT</unit>
+	<value>1</value>
+</length_class_description>
+
+<length_class_description>
+	<language_id>2</language_id>
+	<title>CONJUNTO</title>
+	<unit>CJ</unit>
+	<value>1</value>
+</length_class_description>
+
+</unimedida>

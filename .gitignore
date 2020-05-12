@@ -1,12 +1,15 @@
 .htaccess
 /config.php
 admin/config.php
+/error_log
+admin/error_log
 
 !index.html
 
 download/
 image/data/
 image/cache/
+image/catalog/
 system/cache/
 system/logs/
 
