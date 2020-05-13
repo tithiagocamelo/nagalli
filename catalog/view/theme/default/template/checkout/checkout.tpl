@@ -370,7 +370,7 @@ $(document).delegate('#button-payment-method', 'click', save_payment_method );
 if($('[name="payment_address"]').val() != 'new') {
     save_payment_address();
 }
-<?php $shipping_required['option']['value']; ?>
+<?php print $shipping_required['option']['value'];exit; ?>
 // new thiago
 $('[name="payment_address"]').change(function() {
     if($(this).val() == 'new') {
