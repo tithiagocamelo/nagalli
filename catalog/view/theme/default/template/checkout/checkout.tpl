@@ -21,71 +21,121 @@
     <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
       <h1><?php echo $heading_title; ?></h1>
       <div class="panel-group" id="accordion">
+        
         <div class="panel panel-default">
-          <!--<div class="panel-heading">
-            <h4 class="panel-title"><?php // echo $text_checkout_option; ?></h4>
-          </div>-->
           <div class="panel-collapse collapse" id="collapse-checkout-option">
             <div class="panel-body"></div>
           </div>
         </div>
-        <?php if (!$logged && $account != 'guest') { ?>
-        <div class="panel panel-default hidden">
-          <!--
-            <div class="panel-heading">
-              <h4 class="panel-title"><?php //echo $text_checkout_account; ?></h4>
+        
+        <div class="row">
+            <div class="col-md-4">
+            
+                <div class="panel panel-default">
+                    <div class="panel-collapse collapse" id="collapse-payment-address">
+                        <div class="panel-body"></div>
+                    </div>
+                </div>
+        
+
+                <?php if ($shipping_required) { ?>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"><?php echo $text_checkout_shipping_address; ?></h4>
+                        </div>
+                        <div class="panel-collapse collapse" id="collapse-shipping-address">
+                            <div class="panel-body"></div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default hidden">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"><?php echo $text_checkout_shipping_method; ?></h4>
+                        </div>
+                        <div class="panel-collapse collapse" id="collapse-shipping-method">
+                            <div class="panel-body"></div>
+                        </div>
+                    </div>
+                <?php } ?>
+                
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title"><?php echo $text_checkout_payment_method; ?></h4>
+                    </div>
+                    <div class="panel-collapse collapse" id="collapse-payment-method">
+                        <div class="panel-body"></div>
+                    </div>
+                </div>
+
             </div>
-          --> 
-          <div class="panel-collapse collapse" id="collapse-payment-address">
-            <div class="panel-body"></div>
-          </div>
-        </div>
-        <?php } else { ?>
-        <div class="panel panel-default hidden">
-          <!--
-            <div class="panel-heading">
-              <h4 class="panel-title"><?php //echo $text_checkout_payment_address; ?></h4>
+
+            <div class="col-md-8">
+
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <form action="https://www.revendalight.com.br/nagalli/index.php?route=checkout/cart/edit" method="post" enctype="multipart/form-data">
+                            <div class="table-responsive" style="padding-top: 15px;">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                        <td class="text-center">Imagem</td>
+                                        <td class="text-left">Produto</td>
+                                        <td class="text-left">Modelo</td>
+                                        <td class="text-left">Quantidade</td>
+                                        <td class="text-right">Preço</td>
+                                        <td class="text-right">Total</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">
+                                                <a href="http://www.revendalight.com.br/nagalli/an0082"><img src="https://www.revendalight.com.br/nagalli/image/cache/catalog/produtos/an0082_1-47x47.jpg" alt="ANEL CORAÇÕES ENVELHECIDOS PRATA 925" title="ANEL CORAÇÕES ENVELHECIDOS PRATA 925" class="img-thumbnail"></a>
+                                            </td>
+                                            <td class="text-left">
+                                                <a href="http://www.revendalight.com.br/nagalli/an0082">ANEL CORAÇÕES ENVELHECIDOS PRATA 925</a>
+                                                <br>
+                                                <small>TAMANHO: 12</small>
+                                            </td>
+                                            <td class="text-left">AN0082</td>
+                                            <td class="text-left">
+                                                <div class="input-group btn-block" style="max-width: 200px;">
+                                                    <input type="text" name="quantity[87645]" value="2" size="1" class="form-control">
+                                                    <span class="input-group-btn">
+                                                        <button type="submit" data-toggle="tooltip" title="" class="btn btn-primary" data-original-title="Atualizar"><i class="fa fa-refresh"></i></button>
+                                                        <button type="button" data-toggle="tooltip" title="" class="btn btn-danger" onclick="cart.remove('87645');" data-original-title="Remover"><i class="fa fa-times-circle"></i></button>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td class="text-right">R$14,61</td>
+                                            <td class="text-right">R$29,22</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                        </form>
+
+                    </div>
+
+                    <div class="col-md-12">
+                    
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title"><?php echo $text_checkout_confirm; ?></h4>
+                            </div>
+                            <div class="panel-collapse collapse" id="collapse-checkout-confirm">
+                                <div class="panel-body"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
-          -->
-          <div class="panel-collapse collapse" id="collapse-payment-address">
-            <div class="panel-body"></div>
-          </div>
+
         </div>
-        <?php } ?>
-        <?php if ($shipping_required) { ?>
-        <div class="panel panel-default hidden">
-          <div class="panel-heading">
-            <h4 class="panel-title"><?php echo $text_checkout_shipping_address; ?></h4>
-          </div>
-          <div class="panel-collapse collapse" id="collapse-shipping-address">
-            <div class="panel-body"></div>
-          </div>
-        </div>
-        <div class="panel panel-default hidden">
-          <div class="panel-heading">
-            <h4 class="panel-title"><?php echo $text_checkout_shipping_method; ?></h4>
-          </div>
-          <div class="panel-collapse collapse" id="collapse-shipping-method">
-            <div class="panel-body"></div>
-          </div>
-        </div>
-        <?php } ?>
-        <div class="panel panel-default hidden">
-          <div class="panel-heading">
-            <h4 class="panel-title"><?php echo $text_checkout_payment_method; ?></h4>
-          </div>
-          <div class="panel-collapse collapse" id="collapse-payment-method">
-            <div class="panel-body"></div>
-          </div>
-        </div>
-        <div class="panel panel-default hidden">
-          <div class="panel-heading">
-            <h4 class="panel-title"><?php echo $text_checkout_confirm; ?></h4>
-          </div>
-          <div class="panel-collapse collapse" id="collapse-checkout-confirm">
-            <div class="panel-body"></div>
-          </div>
-        </div>
+        
       </div>
       <?php echo $content_bottom; ?></div>
     <?php echo $column_right; ?></div>
@@ -116,8 +166,8 @@ $(document).ready(function() {
            $('#collapse-checkout-option .panel-body').html(html);
 
 			// $('#collapse-checkout-option').parent().find('.panel-heading .panel-title').html('<a href="#collapse-checkout-option" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_option; ?> <i class="fa fa-caret-down"></i></a>');
-            $('#collapse-checkout-option').removeClass('hidden');
-            $('#collapse-checkout-option').addClass('in');
+            $('#collapse-checkout-option').parent().removeClass('hidden');
+            $('#collapse-checkout-option').parent().addClass('in');
 			// $('a[href=\'#collapse-checkout-option\']').trigger('click');
         },
         error: function(xhr, ajaxOptions, thrownError) {
@@ -134,8 +184,8 @@ $(document).ready(function() {
             $('#collapse-payment-address .panel-body').html(html);
 
 			// $('#collapse-payment-address').parent().find('.panel-heading .panel-title').html('<a href="#collapse-payment-address" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_payment_address; ?> <i class="fa fa-caret-down"></i></a>');
-            $('#collapse-payment-address').addClass('in');
-            $('#collapse-payment-address').removeClass('hidden');
+            $('#collapse-payment-address').parent().addClass('in');
+            $('#collapse-payment-address').parent().removeClass('hidden');
 			// $('a[href=\'#collapse-payment-address\']').trigger('click');
         },
         error: function(xhr, ajaxOptions, thrownError) {
@@ -830,8 +880,8 @@ $(document).delegate('#button-payment-method', 'click', function() {
                $('#collapse-checkout-option .panel-body').html(html);
     
                 // $('#collapse-checkout-option').parent().find('.panel-heading .panel-title').html('<a href="#collapse-checkout-option" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_option; ?> <i class="fa fa-caret-down"></i></a>');
-                $('#collapse-checkout-option').removeClass('hidden');
-                $('#collapse-checkout-option').addClass('in');
+                $('#collapse-checkout-option').parent().removeClass('hidden');
+                $('#collapse-checkout-option').parent().addClass('in');
                 // $('a[href=\'#collapse-checkout-option\']').trigger('click');
             },
             error: function(xhr, ajaxOptions, thrownError) {
@@ -848,8 +898,8 @@ $(document).delegate('#button-payment-method', 'click', function() {
                 $('#collapse-payment-address .panel-body').html(html);
     
                 // $('#collapse-payment-address').parent().find('.panel-heading .panel-title').html('<a href="#collapse-payment-address" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_payment_address; ?> <i class="fa fa-caret-down"></i></a>');
-                $('#collapse-payment-address').addClass('in');
-                $('#collapse-payment-address').removeClass('hidden');
+                $('#collapse-payment-address').parent().addClass('in');
+                $('#collapse-payment-address').parent().removeClass('hidden');
                 // $('a[href=\'#collapse-payment-address\']').trigger('click');
             },
             error: function(xhr, ajaxOptions, thrownError) {
