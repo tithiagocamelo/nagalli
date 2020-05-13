@@ -169,11 +169,13 @@ $(document).ready(function() {
             $('#collapse-checkout-option').parent().removeClass('hidden');
             $('#collapse-checkout-option').addClass('in');
 			// $('a[href=\'#collapse-checkout-option\']').trigger('click');
+
         },
         error: function(xhr, ajaxOptions, thrownError) {
             alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
         }
     });
+    $('#collapse-checkout-option').parent().addClass('hidden');
 });
 <?php } else { ?>
 $(document).ready(function() {
@@ -192,6 +194,8 @@ $(document).ready(function() {
             alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
         }
     });
+
+    $('#quick_checkout').removeClass('hidden');
 });
 <?php } ?>
 
@@ -218,8 +222,6 @@ $(document).delegate('#button-account', 'click', function() {
 			}
 
 			// $('a[href=\'#collapse-payment-address\']').trigger('click');
-
-            $('#quick_checkout').removeClass('hidden');
         },
         error: function(xhr, ajaxOptions, thrownError) {
             alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
