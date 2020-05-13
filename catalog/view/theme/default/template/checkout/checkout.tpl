@@ -28,7 +28,7 @@
           </div>
         </div>
         
-        <div class="row">
+        <div class="row hidden" id="quick_checkout">
             <div class="col-md-4">
             
                 <div class="panel panel-default">
@@ -217,7 +217,9 @@ $(document).delegate('#button-account', 'click', function() {
 				$('#collapse-payment-address').parent().find('.panel-heading .panel-title').html('<a href="#collapse-payment-address" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_payment_address; ?> <i class="fa fa-caret-down"></i></a>');
 			}
 
-			$('a[href=\'#collapse-payment-address\']').trigger('click');
+			// $('a[href=\'#collapse-payment-address\']').trigger('click');
+
+            $('#quick_checkout').removeClass('hidden');
         },
         error: function(xhr, ajaxOptions, thrownError) {
             alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
