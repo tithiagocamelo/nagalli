@@ -167,7 +167,7 @@ $(document).ready(function() {
 
 			// $('#collapse-checkout-option').parent().find('.panel-heading .panel-title').html('<a href="#collapse-checkout-option" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_option; ?> <i class="fa fa-caret-down"></i></a>');
             $('#collapse-checkout-option').parent().removeClass('hidden');
-            $('#collapse-checkout-option').parent().addClass('in');
+            $('#collapse-checkout-option').addClass('in');
 			// $('a[href=\'#collapse-checkout-option\']').trigger('click');
         },
         error: function(xhr, ajaxOptions, thrownError) {
@@ -184,7 +184,7 @@ $(document).ready(function() {
             $('#collapse-payment-address .panel-body').html(html);
 
 			// $('#collapse-payment-address').parent().find('.panel-heading .panel-title').html('<a href="#collapse-payment-address" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_payment_address; ?> <i class="fa fa-caret-down"></i></a>');
-            $('#collapse-payment-address').parent().addClass('in');
+            $('#collapse-payment-address').addClass('in');
             $('#collapse-payment-address').parent().removeClass('hidden');
 			// $('a[href=\'#collapse-payment-address\']').trigger('click');
         },
@@ -881,7 +881,7 @@ $(document).delegate('#button-payment-method', 'click', function() {
     
                 // $('#collapse-checkout-option').parent().find('.panel-heading .panel-title').html('<a href="#collapse-checkout-option" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_option; ?> <i class="fa fa-caret-down"></i></a>');
                 $('#collapse-checkout-option').parent().removeClass('hidden');
-                $('#collapse-checkout-option').parent().addClass('in');
+                $('#collapse-checkout-option').addClass('in');
                 // $('a[href=\'#collapse-checkout-option\']').trigger('click');
             },
             error: function(xhr, ajaxOptions, thrownError) {
@@ -898,7 +898,7 @@ $(document).delegate('#button-payment-method', 'click', function() {
                 $('#collapse-payment-address .panel-body').html(html);
     
                 // $('#collapse-payment-address').parent().find('.panel-heading .panel-title').html('<a href="#collapse-payment-address" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_payment_address; ?> <i class="fa fa-caret-down"></i></a>');
-                $('#collapse-payment-address').parent().addClass('in');
+                $('#collapse-payment-address').addClass('in');
                 $('#collapse-payment-address').parent().removeClass('hidden');
                 // $('a[href=\'#collapse-payment-address\']').trigger('click');
             },
