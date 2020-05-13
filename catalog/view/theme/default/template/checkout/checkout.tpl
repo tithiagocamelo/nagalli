@@ -175,7 +175,6 @@ $(document).ready(function() {
             alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
         }
     });
-    $('#collapse-checkout-option').parent().addClass('hidden');
 });
 <?php } else { ?>
 $(document).ready(function() {
@@ -196,6 +195,7 @@ $(document).ready(function() {
     });
 
     $('#quick_checkout').removeClass('hidden');
+    $('#collapse-checkout-option').parent().addClass('hidden');
 });
 <?php } ?>
 
