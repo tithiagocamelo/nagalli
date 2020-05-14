@@ -95,6 +95,9 @@
       <?php echo $content_bottom; ?></div>
     <?php echo $column_right; ?></div>
 </div>
+
+
+
 <script type="text/javascript"><!--
 $(document).on('change', 'input[name=\'account\']', function() {
 	if ($('#collapse-payment-address').parent().find('.panel-heading .panel-title > *').is('a')) {
@@ -113,12 +116,15 @@ $(document).on('change', 'input[name=\'account\']', function() {
 });
 
 <?php if (!$logged) { ?>
+console.log('podepa')
 $(document).ready(function() {
+    console.log('podepa')
     $.ajax({
         url: 'index.php?route=checkout/login',
         dataType: 'html',
         success: function(html) {
-           $('#collapse-checkout-option .panel-body').html(html);
+            console.log('podepa')
+            $('#collapse-checkout-option .panel-body').html(html);
 
 			// $('#collapse-checkout-option').parent().find('.panel-heading .panel-title').html('<a href="#collapse-checkout-option" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_option; ?> <i class="fa fa-caret-down"></i></a>');
             $('#collapse-checkout-option').parent().removeClass('hidden');
