@@ -70,7 +70,7 @@
       let item_list = $(this).closest('item_list');
 
       let quantity = item_list.find('[name="quantity"]').val(),
-          key = item_list.data('cart_id');
+          key = $(item_list).data('cart_id');
 
       if(Number(quantity) == 0) {
         alert('Quantidade 0 (zero) não permitida');
