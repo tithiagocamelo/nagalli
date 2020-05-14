@@ -67,7 +67,7 @@
   $(document).ready(function() {
     $('.udate_item').click(function() {
 
-      let item_list = $(this).closest('item_list');
+      let item_list = $(this).closest('.item_list');
 
       console.log(item_list);return;
 
