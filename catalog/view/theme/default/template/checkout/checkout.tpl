@@ -98,11 +98,9 @@
 
 <script>
 console.log('podepa');
-</script>
 
-<script>
     console.log('podepa');
-    $(document).on('change', 'input[name=\'account\']', function() {
+    $('input[name=\'account\']').on('change', function() {
         if ($('#collapse-payment-address').parent().find('.panel-heading .panel-title > *').is('a')) {
             if (this.value == 'register') {
                 $('#collapse-payment-address').parent().find('.panel-heading .panel-title').html('<a href="#collapse-payment-address" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_account; ?> <i class="fa fa-caret-down"></i></a>');
@@ -119,7 +117,6 @@ console.log('podepa');
     });
 
     <?php if (!$logged) { ?>
-    console.log('podepa');console.log('podepa');console.log('podepa');console.log('podepa');
     $(document).ready(function() {
         console.log('podepa')
         $.ajax({
