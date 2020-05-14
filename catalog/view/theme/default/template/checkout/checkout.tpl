@@ -128,6 +128,16 @@
                     $('#collapse-payment-address').parent().removeClass('hidden');
                     // $('a[href=\'#collapse-payment-address\']').trigger('click');
 
+                    $('#button-payment-address').hide();
+
+                    $('[name="payment_address"]').change(function() { 
+                        if($(this).val() == 'new') { 
+                            $('#button-payment-address').show()
+                        } else {
+                            $('#button-payment-address').hide()
+                        } 
+                    });
+
                     save_payment_address();
                 },
                 error: function(xhr, ajaxOptions, thrownError) {
@@ -373,6 +383,7 @@
                         // Highlight any found errors
                         $('.text-danger').parent().parent().addClass('has-error');
                     } else {
+                        
                         <?php if ($shipping_required) { ?>
                         $.ajax({
                             url: 'index.php?route=checkout/shipping_address',
