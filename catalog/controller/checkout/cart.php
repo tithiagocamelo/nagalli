@@ -428,6 +428,51 @@ class ControllerCheckoutCart extends Controller {
 		$this->response->setOutput(json_encode($json));
 	}
 
+	public function update() {
+		
+		$this->load->language('checkout/cart');
+
+		$json = array();
+
+		$key = $this->request->post['key'];
+		$quantity = $this->request->post['quantity'];
+		
+		// Update
+		if ( strlen($key) > 0 ) {
+			
+			foreach ($this->cart->getProducts() as $product) {
+				
+				if($product['cart_id'] == $key) {
+
+					$old_quantity = $product['quantity'];
+
+					$this->cart->update($key, $quantity);
+
+					$json['error'] = false;
+					$json['message'] = 'Item atualizado';
+
+					if(!$this->cart->hasStock()) {
+						$this->cart->update($key, $old_quantity);
+						$json['error'] = true;
+						$json['message'] = 'Estoque indisponível';
+					} else {
+						unset($this->session->data['shipping_method']);
+						unset($this->session->data['shipping_methods']);
+						unset($this->session->data['payment_method']);
+						unset($this->session->data['payment_methods']);
+						unset($this->session->data['reward']);
+					}
+					
+				}
+
+			}
+			
+		}
+
+		$this->response->addHeader('Content-Type: application/json');
+		$this->response->setOutput(json_encode($json));
+	}
+
 	public function remove() {
 		$this->load->language('checkout/cart');
 

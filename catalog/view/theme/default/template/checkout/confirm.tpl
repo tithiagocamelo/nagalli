@@ -30,12 +30,15 @@
           <?php } ?></td>
         <td class="text-left"><?php echo $product['model']; ?></td>
         <!--<td class="text-right"><?php echo $product['quantity']; ?></td>-->
-        <td class="text-left"><div class="input-group btn-block" style="max-width: 200px;">
-          <input type="text" name="quantity[<?php echo $product['cart_id']; ?>]" value="<?php echo $product['quantity']; ?>" size="1" class="form-control" />
-          <span class="input-group-btn">
-          <button type="submit" data-toggle="tooltip" title="<?php echo $button_update; ?>" class="btn btn-primary"><i class="fa fa-refresh"></i></button>
-          <button type="button" data-toggle="tooltip" title="<?php echo $button_remove; ?>" class="btn btn-danger" onclick="cart.remove('<?php echo $product['cart_id']; ?>');"><i class="fa fa-times-circle"></i></button>
-          </span></div></td>
+        <td class="text-left">
+          <div class="input-group btn-block item_list" style="max-width: 200px;" data-cart_id="<?php echo $product['cart_id']; ?>">
+            <input type="text" name="quantity" value="<?php echo $product['quantity']; ?>" size="1" class="form-control" />
+            <span class="input-group-btn">
+              <button type="button" data-toggle="tooltip" title="<?php echo $button_update; ?>" class="btn btn-primary udate_item"><i class="fa fa-refresh"></i></button>
+              <button type="button" data-toggle="tooltip" title="<?php echo $button_remove; ?>" class="btn btn-danger" onclick="cart.remove('<?php echo $product['cart_id']; ?>');"><i class="fa fa-times-circle"></i></button>
+            </span>
+          </div>
+        </td>
         <td class="text-right"><?php echo $product['price']; ?></td>
         <td class="text-right"><?php echo $product['total']; ?></td>
       </tr>
@@ -60,6 +63,45 @@
     </tfoot>
   </table>
 </div>
+<script>
+  $(document).ready(function() {
+    $('.udate_item').click(function() {
+
+      let item_list = $(this).closest('item_list');
+
+      let quantity = item_list.find('[name="quantity"]').val(),
+          key = item_list.data('cart_id');
+
+      if(Number(quantity) == 0) {
+        alert('Quantidade 0 (zero) não permitida');
+        return;
+      }
+
+      $.ajax({
+        url: 'index.php?route=checkout/cart/update',
+        type: 'post',
+        data: 'key=' + key + '&quantity=' + ((typeof(quantity) != 'undefined' && quantity > 0 ) ? quantity : 1),
+        dataType: 'json',
+        beforeSend: function() {
+          $('#cart > button').button('loading');
+        },
+        complete: function() {
+          $('#cart > button').button('reset');
+        },
+        success: function(json) {
+          
+          if() {
+            
+          }
+
+        },
+        error: function(xhr, ajaxOptions, thrownError) {
+          alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+        }
+      });
+    });
+  });
+</script>
 <?php echo $payment; ?>
 <?php } else { ?>
   <script type="text/javascript">
