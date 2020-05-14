@@ -267,13 +267,6 @@
                     $('#collapse-payment-address').parent().removeClass('hidden');
                     // $('a[href=\'#collapse-payment-address\']').trigger('click');
 
-                    if($(this).val() == 'new') { 
-                            $('#button-payment-address').show()
-                        } else {
-                            $('#button-payment-address').hide()
-                        } 
-                    });
-
                     save_payment_address();
                 },
                 error: function(xhr, ajaxOptions, thrownError) {
