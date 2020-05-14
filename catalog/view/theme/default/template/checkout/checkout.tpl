@@ -96,9 +96,12 @@
     <?php echo $column_right; ?></div>
 </div>
 
-
+<script>
+console.log('podepa');
+</script>
 
 <script type="text/javascript">
+    console.log('podepa');
     $(document).on('change', 'input[name=\'account\']', function() {
         if ($('#collapse-payment-address').parent().find('.panel-heading .panel-title > *').is('a')) {
             if (this.value == 'register') {
