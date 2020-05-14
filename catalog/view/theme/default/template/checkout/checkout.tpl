@@ -128,9 +128,7 @@
                     $('#collapse-payment-address').parent().removeClass('hidden');
                     // $('a[href=\'#collapse-payment-address\']').trigger('click');
 
-                    $('#button-payment-address').hide();
-
-                    $('[name="payment_address"]').change(function() { 
+                    $(document).delegate('[name="payment_address"]', 'change', function() { 
                         if($(this).val() == 'new') { 
                             $('#button-payment-address').show()
                         } else {
