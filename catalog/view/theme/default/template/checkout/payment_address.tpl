@@ -210,11 +210,14 @@ $('input[name=\'payment_address\']').on('change', function() {
 	if (this.value == 'new') {
 		$('#payment-existing').hide();
 		$('#payment-new').show();
+    $('#button-payment-address').show()
 	} else {
 		$('#payment-existing').show();
 		$('#payment-new').hide();
+    $('#button-payment-address').hide()
 	}
 });
+$('input[name=\'payment_address\']').trigger('change');
 //--></script>
 <script type="text/javascript"><!--
 // Sort the custom fields

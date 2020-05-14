@@ -128,15 +128,12 @@
                     $('#collapse-payment-address').parent().removeClass('hidden');
                     // $('a[href=\'#collapse-payment-address\']').trigger('click');
 
-                    $(document).delegate('[name="payment_address"]', 'change', function() { 
-                        if($(this).val() == 'new') { 
+                    if($(this).val() == 'new') { 
                             $('#button-payment-address').show()
                         } else {
                             $('#button-payment-address').hide()
                         } 
                     });
-
-                    $('[name="payment_address"]').trigger('change');
 
                     save_payment_address();
                 },
