@@ -127,6 +127,8 @@
                     $('#collapse-payment-address').addClass('in');
                     $('#collapse-payment-address').parent().removeClass('hidden');
                     // $('a[href=\'#collapse-payment-address\']').trigger('click');
+
+                    save_payment_address();
                 },
                 error: function(xhr, ajaxOptions, thrownError) {
                     alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
@@ -135,6 +137,7 @@
 
             $('#quick_checkout').removeClass('hidden');
             $('#collapse-checkout-option').parent().addClass('hidden');
+            
         <?php } ?>
 
         // Checkout
@@ -158,8 +161,6 @@
                     } else {
                         $('#collapse-payment-address').parent().find('.panel-heading .panel-title').html('<a href="#collapse-payment-address" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_payment_address; ?> <i class="fa fa-caret-down"></i></a>');
                     }
-
-                    save_payment_address();
 
                     // $('a[href=\'#collapse-payment-address\']').trigger('click');
                 },
