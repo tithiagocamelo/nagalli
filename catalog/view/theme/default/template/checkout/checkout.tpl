@@ -68,16 +68,9 @@
 
                 <div class="row">
                     
-                    <div class="col-md-12">
+                    <div class="col-md-12" id="tab-checkout-confirm">
                     
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title"><?php echo $text_checkout_confirm; ?></h4>
-                            </div>
-                            <div class="panel-collapse collapse" id="collapse-checkout-confirm">
-                                <div class="panel-body"></div>
-                            </div>
-                        </div>
+                        
 
                     </div>
 
@@ -611,11 +604,11 @@
                                 $('#button-payment-method').button('reset');
                             },
                             success: function(html) {
-                                $('#collapse-checkout-confirm .panel-body').html(html);
+                                $('#tab-checkout-confirm').html(html);
         
-                                $('#collapse-checkout-confirm').parent().find('.panel-heading .panel-title').html('<a href="#collapse-checkout-confirm" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_confirm; ?> <i class="fa fa-caret-down"></i></a>');
+                                // $('#collapse-checkout-confirm').parent().find('.panel-heading .panel-title').html('<a href="#collapse-checkout-confirm" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_confirm; ?> <i class="fa fa-caret-down"></i></a>');
         
-                                $('a[href=\'#collapse-checkout-confirm\']').trigger('click');
+                                // $('a[href=\'#collapse-checkout-confirm\']').trigger('click');
                             },
                             error: function(xhr, ajaxOptions, thrownError) {
                                 alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
