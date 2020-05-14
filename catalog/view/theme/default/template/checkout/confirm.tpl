@@ -90,8 +90,10 @@
         },
         success: function(json) {
           
-          if() {
-            
+          if(json.error === false) {
+
+            console.log(json)
+
           }
 
         },
