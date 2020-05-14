@@ -97,8 +97,12 @@
 </div>
 
 <script>
-console.log('podepa');
+$(document).ready(function() {
+    console.log('teste ok')
+}) 
+</script>
 
+<script>
     console.log('podepa');
     $('input[name=\'account\']').on('change', function() {
         if ($('#collapse-payment-address').parent().find('.panel-heading .panel-title > *').is('a')) {
