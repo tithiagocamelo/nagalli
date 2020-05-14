@@ -210,14 +210,14 @@ $('input[name=\'shipping_address\']').on('change', function() {
 	if (this.value == 'new') {
 		$('#shipping-existing').hide();
 		$('#shipping-new').show();
-    $('#button-payment-address').show()
+    $('#button-shipping-address').show()
 	} else {
 		$('#shipping-existing').show();
 		$('#shipping-new').hide();
-    $('#button-payment-address').hide()
+    $('#button-shipping-address').hide()
 	}
 });
-$('#button-payment-address').hide()
+$('#button-shipping-address').hide()
 //--></script>
 <script type="text/javascript"><!--
 $('#collapse-shipping-address .form-group[data-sort]').detach().each(function() {
