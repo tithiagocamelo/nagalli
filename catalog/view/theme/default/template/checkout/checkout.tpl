@@ -136,6 +136,8 @@
                         } 
                     });
 
+                    $('[name="payment_address"]').trigger('change');
+
                     save_payment_address();
                 },
                 error: function(xhr, ajaxOptions, thrownError) {
