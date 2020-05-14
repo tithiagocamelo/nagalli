@@ -217,7 +217,9 @@ $('input[name=\'payment_address\']').on('change', function() {
     $('#button-payment-address').hide()
 	}
 });
-$('input[name=\'payment_address\']').trigger('change');
+
+$('#button-payment-address').hide();
+
 //--></script>
 <script type="text/javascript"><!--
 // Sort the custom fields
