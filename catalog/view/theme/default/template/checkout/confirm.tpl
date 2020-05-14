@@ -69,6 +69,8 @@
 
       let item_list = $(this).closest('item_list');
 
+      console.log(item_list);return;
+
       let quantity = item_list.find('[name="quantity"]').val(),
           key = $(item_list).data('cart_id');
 
