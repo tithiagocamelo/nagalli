@@ -161,7 +161,7 @@
 
     <?php if (!$logged) { ?>
     $(document).ready(function() {
-        console.log('podepa')
+        
         $.ajax({
             url: 'index.php?route=checkout/login',
             dataType: 'html',
