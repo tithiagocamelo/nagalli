@@ -225,6 +225,9 @@
 </script>
 
 <script>
+
+    let save_payment_address = null;
+
     $(document).ready(function() {
         
         <?php if (!$logged) { ?>
@@ -332,7 +335,7 @@
         });
 
         // Payment Address
-        function save_payment_address() {
+        save_payment_address = function() {
             $.ajax({
                 url: 'index.php?route=checkout/payment_address/save',
                 type: 'post',

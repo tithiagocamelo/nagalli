@@ -91,7 +91,15 @@
         success: function(json) {
           
           if(json.error === false) {
-            console.log(json)
+            
+            let html =  '<div class="alert alert-success">' +
+                        '   <i class="fa fa-check-circle"></i>' +
+                        `   ${json.message}` +
+                        '   <button type="button" class="close" data-dismiss="alert">×</button>' +
+                        '</div>';
+
+            save_payment_address();
+
           } else {
             console.log(json)
           }
