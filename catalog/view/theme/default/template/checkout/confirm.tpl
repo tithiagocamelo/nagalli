@@ -91,9 +91,9 @@
         success: function(json) {
           
           if(json.error === false) {
-
             console.log(json)
-
+          } else {
+            console.log(json)
           }
 
         },
