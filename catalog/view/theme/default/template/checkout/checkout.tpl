@@ -84,7 +84,11 @@
       <?php echo $content_bottom; ?></div>
     <?php echo $column_right; ?></div>
 </div>
-
+<div class="main_loader" style="display: none;">
+    <div class="loader">
+        <img src="catalog/view/theme/default/image/loader.gif">
+    </div>
+</div>
 <script>
     $(document).ready(function() {    
         // Register
@@ -346,9 +350,11 @@
                 dataType: 'json',
                 beforeSend: function() {
                     $('#button-payment-address').button('loading');
+                    $('.main_loader').show()
                 },
                 complete: function() {
                     $('#button-payment-address').button('reset');
+                    $('.main_loader').hide()
                 },
                 success: function(json) {
                     $('.alert, .text-danger').remove();
@@ -445,6 +451,7 @@
                 dataType: 'json',
                 beforeSend: function() {
                     $('#button-shipping-address').button('loading');
+                    $('.main_loader').show()
                 },
                 success: function(json) {
                     $('.alert, .text-danger').remove();
@@ -453,6 +460,7 @@
                         location = json['redirect'];
                     } else if (json['error']) {
                         $('#button-shipping-address').button('reset');
+                        $('.main_loader').hide()
         
                         if (json['error']['warning']) {
                             $('#collapse-shipping-address .panel-body').prepend('<div class="alert alert-warning">' + json['error']['warning'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
@@ -476,6 +484,7 @@
                             dataType: 'html',
                             complete: function() {
                                 $('#button-shipping-address').button('reset');
+                                $('.main_loader').hide()
                             },
                             success: function(html) {
                                 $('#collapse-shipping-method .panel-body').html(html);
@@ -534,6 +543,7 @@
                 dataType: 'json',
                 beforeSend: function() {
                     $('#button-shipping-method').button('loading');
+                    $('.main_loader').show();
                 },
                 success: function(json) {
                     $('.alert, .text-danger').remove();
@@ -542,6 +552,7 @@
                         location = json['redirect'];
                     } else if (json['error']) {
                         $('#button-shipping-method').button('reset');
+                        $('.main_loader').hide();
         
                         if (json['error']['warning']) {
                             $('#collapse-shipping-method .panel-body').prepend('<div class="alert alert-danger">' + json['error']['warning'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
@@ -552,6 +563,7 @@
                             dataType: 'html',
                             complete: function() {
                                 $('#button-shipping-method').button('reset');
+                                $('.main_loader').hide();
                             },
                             success: function(html) {
                                 $('#collapse-payment-method .panel-body').html(html);
@@ -590,6 +602,7 @@
                 dataType: 'json',
                 beforeSend: function() {
                     $('#button-payment-method').button('loading');
+                    $('.main_loader').show();
                 },
                 success: function(json) {
                     $('.alert, .text-danger').remove();
@@ -598,6 +611,7 @@
                         location = json['redirect'];
                     } else if (json['error']) {
                         $('#button-payment-method').button('reset');
+                        $('.main_loader').hide();
                         
                         if (json['error']['warning']) {
                             $('#collapse-payment-method .panel-body').prepend('<div class="alert alert-danger">' + json['error']['warning'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
@@ -608,6 +622,7 @@
                             dataType: 'html',
                             complete: function() {
                                 $('#button-payment-method').button('reset');
+                                $('.main_loader').hide();
                             },
                             success: function(html) {
                                 $('#tab-checkout-confirm').html(html);
