@@ -45,7 +45,7 @@
 <?php } ?>
 
 <script>
-  function save_payment_method() {
+  /*function save_payment_method() {
 
     $('[name="agree"]').prop('checked', true);
 
@@ -92,5 +92,5 @@
         alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
       }
     });
-  }
+  }*/
 </script>
