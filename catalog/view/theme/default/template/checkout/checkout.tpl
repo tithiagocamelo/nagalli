@@ -226,7 +226,10 @@
 
 <script>
 
-    let save_payment_address = null;
+    let save_payment_address = null,
+        save_shipping_address = null,
+        save_shipping_method = null,
+        save_payment_method = null;
 
     $(document).ready(function() {
         
@@ -434,7 +437,7 @@
         }
 
         // Shipping Address
-        function save_shipping_address() {
+        save_shipping_address = function() {
             $.ajax({
                 url: 'index.php?route=checkout/shipping_address/save',
                 type: 'post',
@@ -523,7 +526,7 @@
         }
 
         // Shipping Method
-        function save_shipping_method() {
+        save_shipping_method = function() {
             $.ajax({
                 url: 'index.php?route=checkout/shipping_method/save',
                 type: 'post',
@@ -576,7 +579,7 @@
             });
         }
 
-        function save_payment_method() {
+        save_payment_method = function() {
 
             $('[name="agree"]').prop('checked', true);
 
@@ -624,6 +627,14 @@
                 }
             });
         }
+
+        $(document).delegate('#button-payment-address', 'click', save_payment_address );
+
+        $(document).delegate('#button-shipping-address', 'click', save_shipping_address );
+
+        $(document).delegate('[name="shipping_method"]', 'change', save_shipping_method );
+
+        $(document).delegate('[name="payment_method"]', 'change', save_payment_method );
 
     });
 </script>

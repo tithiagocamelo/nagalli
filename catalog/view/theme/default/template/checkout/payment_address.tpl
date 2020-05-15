@@ -351,4 +351,6 @@ $('#collapse-payment-address select[name=\'country_id\']').on('change', function
 });
 
 $('#collapse-payment-address select[name=\'country_id\']').trigger('change');
+
+$('#payment-existing [name="address_id"]').change( save_payment_address );
 //--></script>

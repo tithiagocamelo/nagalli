@@ -1,3 +1,7 @@
-.panel {
-    margin-top: 10px;
+.panel, #tab-checkout-confirm {
+    margin-top: 15px;
+}
+
+#tab-checkout-confirm {
+    padding-left: 0;
 }

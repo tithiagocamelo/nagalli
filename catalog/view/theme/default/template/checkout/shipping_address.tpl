@@ -348,4 +348,6 @@ $('#collapse-shipping-address select[name=\'country_id\']').on('change', functio
 });
 
 $('#collapse-shipping-address select[name=\'country_id\']').trigger('change');
+
+$('#shipping-existing [name="address_id"]').change( save_shipping_address );
 //--></script>
