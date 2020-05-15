@@ -86,7 +86,7 @@
 </div>
 <div class="main_loader" style="display: none;">
     <div class="loader">
-        <img src="catalog/view/theme/default/image/loader.gif">
+        <img src="catalog/view/theme/default/image/loader.svg">
     </div>
 </div>
 <script>
