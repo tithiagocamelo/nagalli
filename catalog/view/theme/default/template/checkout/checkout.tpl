@@ -620,6 +620,9 @@
                         $.ajax({
                             url: 'index.php?route=checkout/confirm',
                             dataType: 'html',
+                            beforeSend: function() {
+                                $('.main_loader').show();
+                            },
                             complete: function() {
                                 $('#button-payment-method').button('reset');
                                 $('.main_loader').hide();
