@@ -70,9 +70,6 @@
     <?php //echo $currency; ?>
     <?php //echo $language; ?>
 
-    <!-- buscador -->
-    <div class="col-sm-4 jumbotron-ls" style="padding-left: 30px;"><?php echo $search; ?></div>
-
     <!-- LOGO -->
     <div id="logo" class="col-sm-4">
       <?php if ($logo) { ?>
@@ -82,6 +79,8 @@
       <?php } ?>
     </div>
 
+		<!-- buscador -->
+    <div class="col-sm-4 jumbotron-ls" style="padding-left: 30px;"><?php echo $search; ?></div>
     
   </div>
 </nav>
@@ -110,26 +109,26 @@
     </div>
     <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class="nav navbar-nav">
-        <li><a class="promocao" href="index.php?route=product/promocao">PROMOÇÃO</a></li>
-        <li><a href="index.php?route=product/novidades">LANÇAMENTOS</a></li>
         <?php foreach ($categories as $category) { ?>
-        <?php if ($category['children']) { ?>
-        <li class="dropdown"><a href="<?php echo $category['href']; ?>" class="dropdown-toggle" data-toggle="dropdown"><?php echo strtoupper($category['name']); ?></a>
-          <div class="dropdown-menu">
-            <div class="dropdown-inner">
-              <?php foreach (array_chunk($category['children'], ceil(count($category['children']) / $category['column'])) as $children) { ?>
-              <ul class="list-unstyled">
-                <?php foreach ($children as $child) { ?>
-                <li><a href="<?php echo $child['href']; ?>"><?php echo strtoupper($child['name']); ?></a></li>
-                <?php } ?>
-              </ul>
-              <?php } ?>
-            </div>
-            <a href="<?php echo $category['href']; ?>" class="see-all"><?php echo $text_all; ?> <?php echo strtoupper($category['name']); ?></a> </div>
-        </li>
-        <?php } else { ?>
-        <li><a href="<?php echo $category['href']; ?>"><?php echo strtoupper($category['name']); ?></a></li>
-        <?php } ?>
+					
+					<?php if ($category['children']) { ?>
+            <li class="dropdown"><a href="<?php echo $category['href']; ?>" class="dropdown-toggle" data-toggle="dropdown"><?php echo strtoupper($category['name']); ?></a>
+              <div class="dropdown-menu">
+                <div class="dropdown-inner">
+                  <?php foreach (array_chunk($category['children'], ceil(count($category['children']) / $category['column'])) as $children) { ?>
+                  <ul class="list-unstyled">
+                    <?php foreach ($children as $child) { ?>
+                    <li><a href="<?php echo $child['href']; ?>"><?php echo strtoupper($child['name']); ?></a></li>
+                    <?php } ?>
+                  </ul>
+                  <?php } ?>
+                </div>
+                <a href="<?php echo $category['href']; ?>" class="see-all"><?php echo $text_all; ?> <?php echo strtoupper($category['name']); ?></a> </div>
+            </li>
+          <?php } else { ?>
+            <li><a href="<?php echo $category['href']; ?>"><?php echo strtoupper($category['name']); ?></a></li>
+					<?php } ?>
+					
         <?php } ?>
       </ul>
     </div>
