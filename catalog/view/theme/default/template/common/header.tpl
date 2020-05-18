@@ -23,6 +23,7 @@
 <link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 <link href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,300,700" rel="stylesheet" type="text/css" />
 <link href="catalog/view/theme/default/stylesheet/stylesheet.css" rel="stylesheet">
+<link href="catalog/view/javascript/nagalli/style.min.css" rel="stylesheet">
 <?php foreach ($styles as $style) { ?>
 <link href="<?php echo $style['href']; ?>" type="text/css" rel="<?php echo $style['rel']; ?>" media="<?php echo $style['media']; ?>" />
 <?php } ?>
@@ -71,7 +72,7 @@
     <?php //echo $language; ?>
 
     <!-- buscador -->
-    <div class="col-sm-4 jumbotron-ls" style="padding-left: 30px;"><?php echo $search; ?></div>
+    <div class="col-sm-4 jumbotron-ls pull-right" style="padding-left: 30px;"><?php echo $search; ?></div>
 
     <!-- LOGO -->
     <div id="logo" class="col-sm-4">
@@ -103,7 +104,7 @@
   </div>
 </header>
 <?php if ($categories) { ?>
-<div class="container">
+<div class="container-fluid" id="container-menu">
   <nav id="menu" class="navbar">
     <div class="navbar-header"><span id="category" class="visible-xs"></span>
       <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
