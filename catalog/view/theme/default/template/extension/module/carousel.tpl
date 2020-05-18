@@ -1,5 +1,5 @@
 <div class="row" id="fotos">
-<?php if($module == 0) {$largura = 3;$i = 3;} else { $i = 2;$largura = 4; }
+<?php if($module == 0) {$largura = 4;$i = 3;} else { $i = 2;$largura = 4; }
 	
 	foreach ($banners as $banner) { ?>
   <div class="col-lg-<?php echo $largura; ?> col-sm-<?php echo $largura; ?> col-md-<?php echo $largura; ?> col-xs-<?php echo $largura; ?>">
