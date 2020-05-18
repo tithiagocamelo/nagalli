@@ -70,6 +70,9 @@
     <?php //echo $currency; ?>
     <?php //echo $language; ?>
 
+    <!-- buscador -->
+    <div class="col-sm-4 jumbotron-ls" style="padding-left: 30px;"><?php echo $search; ?></div>
+
     <!-- LOGO -->
     <div id="logo" class="col-sm-4">
       <?php if ($logo) { ?>
@@ -79,8 +82,6 @@
       <?php } ?>
     </div>
 
-		<!-- buscador -->
-    <div class="col-sm-4 jumbotron-ls" style="padding-left: 30px;"><?php echo $search; ?></div>
     
   </div>
 </nav>
