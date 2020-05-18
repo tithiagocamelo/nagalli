@@ -42,6 +42,7 @@
 <nav id="top">
   <div class="container">
 
+<?php if(isset($_GET['testes'])) { ?>
     <div class="col-sm-4 pull-right jumbotron-ls">
       <div id="top-links" class="nav pull-right">
         <ul class="list-inline">
@@ -67,15 +68,16 @@
         </ul>
       </div>
     </div>
+<?php } ?>
 
     <?php //echo $currency; ?>
     <?php //echo $language; ?>
 
-    <!-- buscador -->
-    <div class="col-sm-4 jumbotron-ls pull-right" style="padding-left: 30px;"><?php echo $search; ?></div>
-
+    <!-- buscador 
+    <div class="col-sm-4 jumbotron-ls pull-right" style="padding-left: 30px;"><?php //echo $search; ?></div>
+    -->
     <!-- LOGO -->
-    <div id="logo" class="col-sm-4">
+    <div id="logo" class="col-sm-3">
       <?php if ($logo) { ?>
       <a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" class="img-responsive" /></a>
       <?php } else { ?>
