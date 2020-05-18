@@ -43,6 +43,17 @@
   <div class="container">
 
 <?php if(isset($_GET['testes'])) { ?>
+
+    <div class="col-sm-12">
+      <div class="row" id="top-menu-access">
+        <div class="col-sm-6">
+          <li><i class="fa fa-home"></i></li>
+          <li>teste2</li>
+        </div>
+        <div class="col-sm-6 pull-right"></div>
+      </div>
+    </div>
+
     <div class="col-sm-4 pull-right jumbotron-ls">
       <div id="top-links" class="nav pull-right">
         <ul class="list-inline">

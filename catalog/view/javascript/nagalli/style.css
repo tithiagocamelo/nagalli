@@ -58,6 +58,7 @@ body {
 }
 
 .owl-carousel {
+  background: #ffffff00;
   background-color: #ffffff00;
 }
 
@@ -68,6 +69,21 @@ body {
 .product-thumb .button-group {
   background-color: #00000000;
 }
+
+div#top-menu-access li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 10px 0 0;
+}
+
+
+
+
+
+
+
+
+
 
 
 /** custom button primary */
