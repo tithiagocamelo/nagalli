@@ -61,48 +61,95 @@ body {
 
 /** custom button primary */
 
-.btn-primary { 
+.btn-primary-nagalli { 
     color: #ffffff; 
     background-color: #383838; 
     border-color: #212121; 
   } 
    
-  .btn-primary:hover, 
-  .btn-primary:focus, 
-  .btn-primary:active, 
-  .btn-primary.active, 
-  .open .dropdown-toggle.btn-primary { 
+  .btn-primary-nagalli:hover, 
+  .btn-primary-nagalli:focus, 
+  .btn-primary-nagalli:active, 
+  .btn-primary-nagalli.active, 
+  .open .dropdown-toggle.btn-primary-nagalli { 
     color: #ffffff; 
     background-color: #595959; 
     border-color: #212121; 
   } 
    
-  .btn-primary:active, 
-  .btn-primary.active, 
-  .open .dropdown-toggle.btn-primary { 
+  .btn-primary-nagalli:active, 
+  .btn-primary-nagalli.active, 
+  .open .dropdown-toggle.btn-primary-nagalli { 
     background-image: none; 
   } 
    
-  .btn-primary.disabled, 
-  .btn-primary[disabled], 
-  fieldset[disabled] .btn-primary, 
-  .btn-primary.disabled:hover, 
-  .btn-primary[disabled]:hover, 
-  fieldset[disabled] .btn-primary:hover, 
-  .btn-primary.disabled:focus, 
-  .btn-primary[disabled]:focus, 
-  fieldset[disabled] .btn-primary:focus, 
-  .btn-primary.disabled:active, 
-  .btn-primary[disabled]:active, 
-  fieldset[disabled] .btn-primary:active, 
-  .btn-primary.disabled.active, 
-  .btn-primary[disabled].active, 
-  fieldset[disabled] .btn-primary.active { 
+  .btn-primary-nagalli.disabled, 
+  .btn-primary-nagalli[disabled], 
+  fieldset[disabled] .btn-primary-nagalli, 
+  .btn-primary-nagalli.disabled:hover, 
+  .btn-primary-nagalli[disabled]:hover, 
+  fieldset[disabled] .btn-primary-nagalli:hover, 
+  .btn-primary-nagalli.disabled:focus, 
+  .btn-primary-nagalli[disabled]:focus, 
+  fieldset[disabled] .btn-primary-nagalli:focus, 
+  .btn-primary-nagalli.disabled:active, 
+  .btn-primary-nagalli[disabled]:active, 
+  fieldset[disabled] .btn-primary-nagalli:active, 
+  .btn-primary-nagalli.disabled.active, 
+  .btn-primary-nagalli[disabled].active, 
+  fieldset[disabled] .btn-primary-nagalli.active { 
     background-color: #383838; 
     border-color: #212121; 
   } 
    
-  .btn-primary .badge { 
+  .btn-primary-nagalli .badge { 
     color: #383838; 
+    background-color: #ffffff; 
+  }
+
+
+  .btn-danger-nagalli { 
+    color: #ffffff; 
+    background-color: #DE1B14; 
+    border-color: #D4130C; 
+  } 
+   
+  .btn-danger-nagalli:hover, 
+  .btn-danger-nagalli:focus, 
+  .btn-danger-nagalli:active, 
+  .btn-danger-nagalli.active, 
+  .open .dropdown-toggle.btn-danger-nagalli { 
+    color: #ffffff; 
+    background-color: #AB0707; 
+    border-color: #D4130C; 
+  } 
+   
+  .btn-danger-nagalli:active, 
+  .btn-danger-nagalli.active, 
+  .open .dropdown-toggle.btn-danger-nagalli { 
+    background-image: none; 
+  } 
+   
+  .btn-danger-nagalli.disabled, 
+  .btn-danger-nagalli[disabled], 
+  fieldset[disabled] .btn-danger-nagalli, 
+  .btn-danger-nagalli.disabled:hover, 
+  .btn-danger-nagalli[disabled]:hover, 
+  fieldset[disabled] .btn-danger-nagalli:hover, 
+  .btn-danger-nagalli.disabled:focus, 
+  .btn-danger-nagalli[disabled]:focus, 
+  fieldset[disabled] .btn-danger-nagalli:focus, 
+  .btn-danger-nagalli.disabled:active, 
+  .btn-danger-nagalli[disabled]:active, 
+  fieldset[disabled] .btn-danger-nagalli:active, 
+  .btn-danger-nagalli.disabled.active, 
+  .btn-danger-nagalli[disabled].active, 
+  fieldset[disabled] .btn-danger-nagalli.active { 
+    background-color: #DE1B14; 
+    border-color: #D4130C; 
+  } 
+   
+  .btn-danger-nagalli .badge { 
+    color: #DE1B14; 
     background-color: #ffffff; 
   }

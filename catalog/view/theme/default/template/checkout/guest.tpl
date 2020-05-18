@@ -319,7 +319,7 @@
 <?php } ?>
 <div class="buttons">
   <div class="pull-right">
-    <input type="button" value="<?php echo $button_continue; ?>" id="button-guest" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary" />
+    <input type="button" value="<?php echo $button_continue; ?>" id="button-guest" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary-nagalli" />
   </div>
 </div>
 <script type="text/javascript"><!--
