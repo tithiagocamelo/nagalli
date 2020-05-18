@@ -84,9 +84,11 @@
         dataType: 'json',
         beforeSend: function() {
           $('#cart > button').button('loading');
+          $('.main_loader').show();
         },
         complete: function() {
           $('#cart > button').button('reset');
+          $('.main_loader').hide();
         },
         success: function(json) {
           
