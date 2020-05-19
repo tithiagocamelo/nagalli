@@ -313,7 +313,7 @@
           <?php } ?>
         </div>
       </div>
-      <?php if (false or $products) { ?>
+      <?php if (false and $products) { ?>
       <h3><?php echo $text_related; ?></h3>
       <div class="row">
         <?php $i = 0; ?>
