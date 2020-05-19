@@ -186,7 +186,8 @@ var cart = {
 				type: 'get',
 				dataType: 'html',
 				success: function(response) {
-					html  = '<div id="modal-quickview" class="modal">';
+
+				let html  = '<div id="modal-quickview" class="modal">';
 					html += '  <div class="modal-dialog">';
 					html += '    <div class="modal-content">';
 					html += '      <div class="modal-header">';
@@ -198,9 +199,11 @@ var cart = {
 					html += '  </div>';
 					html += '</div>';
 		
-					$('body').append(html);
-		
-					$('#modal-quickview').modal('show');
+					$(document).ready(function() {
+						$('body').append(html);
+						$('#modal-quickview').modal('show');
+					});
+					
 				}
 			});
 
