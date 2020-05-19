@@ -179,10 +179,8 @@ var cart = {
 			
 			$('#modal-quickview').remove();
 		
-			var element = this;
-		
 			$.ajax({
-				url: 'index.php?route=product/product&quickview=1&' + 'product_id=' + product_id,
+				url: 'index.php?route=product/quickview&' + 'product_id=' + product_id,
 				type: 'get',
 				dataType: 'html',
 				success: function(response) {

@@ -144,98 +144,107 @@ footer {
 }
 
 
+#gallery_01 img{
+  border:2px solid white;
+}
+
+.active img{
+  border:2px solid #333 !important;
+}
+
+
 
 /** custom button primary */
 
 .btn-primary-nagalli { 
-    color: #ffffff; 
-    background-color: #383838; 
-    border-color: #212121; 
-  } 
-   
-  .btn-primary-nagalli:hover, 
-  .btn-primary-nagalli:focus, 
-  .btn-primary-nagalli:active, 
-  .btn-primary-nagalli.active, 
-  .open .dropdown-toggle.btn-primary-nagalli { 
-    color: #ffffff; 
-    background-color: #595959; 
-    border-color: #212121; 
-  } 
-   
-  .btn-primary-nagalli:active, 
-  .btn-primary-nagalli.active, 
-  .open .dropdown-toggle.btn-primary-nagalli { 
-    background-image: none; 
-  } 
-   
-  .btn-primary-nagalli.disabled, 
-  .btn-primary-nagalli[disabled], 
-  fieldset[disabled] .btn-primary-nagalli, 
-  .btn-primary-nagalli.disabled:hover, 
-  .btn-primary-nagalli[disabled]:hover, 
-  fieldset[disabled] .btn-primary-nagalli:hover, 
-  .btn-primary-nagalli.disabled:focus, 
-  .btn-primary-nagalli[disabled]:focus, 
-  fieldset[disabled] .btn-primary-nagalli:focus, 
-  .btn-primary-nagalli.disabled:active, 
-  .btn-primary-nagalli[disabled]:active, 
-  fieldset[disabled] .btn-primary-nagalli:active, 
-  .btn-primary-nagalli.disabled.active, 
-  .btn-primary-nagalli[disabled].active, 
-  fieldset[disabled] .btn-primary-nagalli.active { 
-    background-color: #383838; 
-    border-color: #212121; 
-  } 
-   
-  .btn-primary-nagalli .badge { 
-    color: #383838; 
-    background-color: #ffffff; 
-  }
+  color: #ffffff; 
+  background-color: #383838; 
+  border-color: #383838; 
+} 
+ 
+.btn-primary-nagalli:hover, 
+.btn-primary-nagalli:focus, 
+.btn-primary-nagalli:active, 
+.btn-primary-nagalli.active, 
+.open .dropdown-toggle.btn-primary-nagalli { 
+  color: #ffffff; 
+  background-color: #575757; 
+  border-color: #383838; 
+} 
+ 
+.btn-primary-nagalli:active, 
+.btn-primary-nagalli.active, 
+.open .dropdown-toggle.btn-primary-nagalli { 
+  background-image: none; 
+} 
+ 
+.btn-primary-nagalli.disabled, 
+.btn-primary-nagalli[disabled], 
+fieldset[disabled] .btn-primary-nagalli, 
+.btn-primary-nagalli.disabled:hover, 
+.btn-primary-nagalli[disabled]:hover, 
+fieldset[disabled] .btn-primary-nagalli:hover, 
+.btn-primary-nagalli.disabled:focus, 
+.btn-primary-nagalli[disabled]:focus, 
+fieldset[disabled] .btn-primary-nagalli:focus, 
+.btn-primary-nagalli.disabled:active, 
+.btn-primary-nagalli[disabled]:active, 
+fieldset[disabled] .btn-primary-nagalli:active, 
+.btn-primary-nagalli.disabled.active, 
+.btn-primary-nagalli[disabled].active, 
+fieldset[disabled] .btn-primary-nagalli.active { 
+  background-color: #383838; 
+  border-color: #383838; 
+} 
+ 
+.btn-primary-nagalli .badge { 
+  color: #383838; 
+  background-color: #ffffff; 
+}
 
 
-  .btn-danger-nagalli { 
-    color: #ffffff; 
-    background-color: #DE1B14; 
-    border-color: #D4130C; 
-  } 
-   
-  .btn-danger-nagalli:hover, 
-  .btn-danger-nagalli:focus, 
-  .btn-danger-nagalli:active, 
-  .btn-danger-nagalli.active, 
-  .open .dropdown-toggle.btn-danger-nagalli { 
-    color: #ffffff; 
-    background-color: #AB0707; 
-    border-color: #D4130C; 
-  } 
-   
-  .btn-danger-nagalli:active, 
-  .btn-danger-nagalli.active, 
-  .open .dropdown-toggle.btn-danger-nagalli { 
-    background-image: none; 
-  } 
-   
-  .btn-danger-nagalli.disabled, 
-  .btn-danger-nagalli[disabled], 
-  fieldset[disabled] .btn-danger-nagalli, 
-  .btn-danger-nagalli.disabled:hover, 
-  .btn-danger-nagalli[disabled]:hover, 
-  fieldset[disabled] .btn-danger-nagalli:hover, 
-  .btn-danger-nagalli.disabled:focus, 
-  .btn-danger-nagalli[disabled]:focus, 
-  fieldset[disabled] .btn-danger-nagalli:focus, 
-  .btn-danger-nagalli.disabled:active, 
-  .btn-danger-nagalli[disabled]:active, 
-  fieldset[disabled] .btn-danger-nagalli:active, 
-  .btn-danger-nagalli.disabled.active, 
-  .btn-danger-nagalli[disabled].active, 
-  fieldset[disabled] .btn-danger-nagalli.active { 
-    background-color: #DE1B14; 
-    border-color: #D4130C; 
-  } 
-   
-  .btn-danger-nagalli .badge { 
-    color: #DE1B14; 
-    background-color: #ffffff; 
-  }
+.btn-danger-nagalli { 
+  color: #ffffff; 
+  background-color: #DD0000; 
+  border-color: #DD0000; 
+} 
+ 
+.btn-danger-nagalli:hover, 
+.btn-danger-nagalli:focus, 
+.btn-danger-nagalli:active, 
+.btn-danger-nagalli.active, 
+.open .dropdown-toggle.btn-danger-nagalli { 
+  color: #ffffff; 
+  background-color: #CF0000; 
+  border-color: #DD0000; 
+} 
+ 
+.btn-danger-nagalli:active, 
+.btn-danger-nagalli.active, 
+.open .dropdown-toggle.btn-danger-nagalli { 
+  background-image: none; 
+} 
+ 
+.btn-danger-nagalli.disabled, 
+.btn-danger-nagalli[disabled], 
+fieldset[disabled] .btn-danger-nagalli, 
+.btn-danger-nagalli.disabled:hover, 
+.btn-danger-nagalli[disabled]:hover, 
+fieldset[disabled] .btn-danger-nagalli:hover, 
+.btn-danger-nagalli.disabled:focus, 
+.btn-danger-nagalli[disabled]:focus, 
+fieldset[disabled] .btn-danger-nagalli:focus, 
+.btn-danger-nagalli.disabled:active, 
+.btn-danger-nagalli[disabled]:active, 
+fieldset[disabled] .btn-danger-nagalli:active, 
+.btn-danger-nagalli.disabled.active, 
+.btn-danger-nagalli[disabled].active, 
+fieldset[disabled] .btn-danger-nagalli.active { 
+  background-color: #DD0000; 
+  border-color: #DD0000; 
+} 
+ 
+.btn-danger-nagalli .badge { 
+  color: #DD0000; 
+  background-color: #ffffff; 
+}

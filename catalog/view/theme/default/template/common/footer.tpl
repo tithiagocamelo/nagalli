@@ -73,6 +73,7 @@
         </ul>
       </div>
       <?php } ?>
+      
       <div class="col-sm-5">
         <p>JOIAS NAGALLI © 2015 - Todos os direitos reservados.</p>
         <p>As imagens e informações exibidas são exclusivas do site.</p>
@@ -96,7 +97,9 @@
     </div>
   </div>
 </div>
-  
+
+  <script src="catalog/view/javascript/nagalli/js/jquery.elevateZoom.min.js"></script>
+
 </body>
 </html>
 

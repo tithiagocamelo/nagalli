@@ -15,17 +15,17 @@
         <?php $class = 'col-sm-8'; ?>
         <?php } ?>
         <div class="<?php echo $class; ?>">
-          <?php if ($thumb || $images) { ?>
-          <ul class="thumbnails">
-            <?php if ($thumb) { ?>
-            <li><a class="thumbnail" href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>"><img src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a></li>
-            <?php } ?>
+          <?php if ($thumb || $images) { ?>    
+            <img id="product_image" src="<?php echo $thumb; ?>" data-zoom-image="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" />
             <?php if ($images) { ?>
-            <?php foreach ($images as $image) { ?>
-            <li class="image-additional"><a class="thumbnail" href="<?php echo $image['popup']; ?>" title="<?php echo $heading_title; ?>"> <img src="<?php echo $image['thumb']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a></li>
+              <div class="galery">
+                <?php foreach ($images as $image) { ?>
+                  <a href="#" data-image="<?php echo $image['thumb']; ?>" data-zoom-image="<?php echo $image['popup']; ?>">
+                    <img id="product_image" src="<?php echo $image['thumb']; ?>" />
+                  </a>
+                <?php } ?>
+              </div>
             <?php } ?>
-            <?php } ?>
-          </ul>
           <?php } ?>
           <ul class="nav nav-tabs">
             <li class="active"><a href="#tab-description" data-toggle="tab"><?php echo $tab_description; ?></a></li>
@@ -407,7 +407,7 @@ $('select[name=\'recurring_id\'], input[name="quantity"]').change(function(){
 	});
 });
 //--></script>
-<script type="text/javascript"><!--
+<script type="text/javascript">
 $('#button-cart').on('click', function() {
 	$.ajax({
 		url: 'index.php?route=checkout/cart/add',
@@ -460,8 +460,8 @@ $('#button-cart').on('click', function() {
         }
 	});
 });
-//--></script>
-<script type="text/javascript"><!--
+</script>
+<script type="text/javascript">
 /* $('.date').datetimepicker({
 	pickTime: false
 });
@@ -475,7 +475,7 @@ $('.time').datetimepicker({
 	pickDate: false
 }); */
 
-$('#titulo-modal').html($('#titulo-produto').text())
+$('#titulo-modal').html($('#titulo-produto').text());
 
 $('button[id^=\'button-upload\']').on('click', function() {
 	var node = this;
@@ -528,8 +528,8 @@ $('button[id^=\'button-upload\']').on('click', function() {
 		}
 	}, 500);
 });
-//--></script>
-<script type="text/javascript"><!--
+</script>
+<script type="text/javascript">
 $('#review').delegate('.pagination a', 'click', function(e) {
     e.preventDefault();
 
@@ -573,12 +573,18 @@ $('#button-review').on('click', function() {
 });
 
 $(document).ready(function() {
-	$('.thumbnails').magnificPopup({
-		type:'image',
-		delegate: 'a',
-		gallery: {
-			enabled:true
-		}
-	});
+
+  $('#product_image').elevateZoom({
+    gallery: 'galery',
+    galleryActiveClass: 'active',
+    imageCrossfade: true
+  });
+
+  $("#product_image").bind("click", function(e) {  
+    let ez = $('#product_image').data('elevateZoom');	
+    $.fancybox(ez.getGalleryList());
+    return false;
+  });
+
 });
-//--></script>
+</script>
