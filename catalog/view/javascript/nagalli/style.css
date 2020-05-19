@@ -121,8 +121,14 @@ body {
 }
 
 @media (min-width: 768px) {
-  .modal-dialog {
+  #modal-quickview .modal-dialog {
       width: 768px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  #modal-quickview .modal-dialog {
+      width: 70% !important;
   }
 }
 
