@@ -162,7 +162,7 @@ var cart = {
 
 					// Need to set timeout otherwise it wont update the total
 					setTimeout(function () {
-						$('#cart-total').html('<i class="fa fa-shopping-cart"></i> ' + json['total'] + '');
+						$('#cart-total').html(' ' + json['total'] + '');
 					}, 100);
 
 					$('html, body').animate({ scrollTop: 0 }, 'slow');
@@ -190,7 +190,7 @@ var cart = {
 			success: function(json) {
 				// Need to set timeout otherwise it wont update the total
 				setTimeout(function () {
-					$('#cart-total').html('<i class="fa fa-shopping-cart"></i> ' + json['total'] + '');
+					$('#cart-total').html(' ' + json['total'] + '');
 				}, 100);
 
 				var getURlRewrite = $(location).attr('href').split('/').pop();
@@ -224,7 +224,7 @@ var cart = {
 			success: function(json) {
 				// Need to set timeout otherwise it wont update the total
 				setTimeout(function () {
-					$('#cart-total').html('<i class="fa fa-shopping-cart"></i> ' + json['total'] + '');
+					$('#cart-total').html(' ' + json['total'] + '');
 				}, 100);
 
 				var getURlRewrite = $(location).attr('href').split('/').pop();
@@ -263,7 +263,7 @@ var voucher = {
 			success: function(json) {
 				// Need to set timeout otherwise it wont update the total
 				setTimeout(function () {
-					$('#cart-total').html('<i class="fa fa-shopping-cart"></i> ' + json['total'] + '');
+					$('#cart-total').html(' ' + json['total'] + '');
 				}, 100);
 
 				var getURlRewrite = $(location).attr('href').split('/').pop();
