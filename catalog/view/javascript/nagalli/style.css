@@ -58,8 +58,8 @@ body {
 }
 
 .owl-carousel {
-  background: #ffffff00;
-  background-color: #ffffff00;
+  background: #ffffff00 !important;
+  background-color: #ffffff00 !important;
 }
 
 .product-thumb .button-group button {
@@ -90,7 +90,7 @@ body {
 }
 
 
-#top, #top i {
+#top, #top i, #top a {
   color: #cccccc !important;
 }
 
@@ -115,6 +115,20 @@ body {
   right: 50px;
   top: 28%;
 }
+
+
+
+footer {
+  background-color: #383838;
+  color: #e4e4e4;
+}
+
+#text-powered {
+  padding: 10px;
+  font-size: 10px;
+  text-align: center;
+}
+
 
 
 /** custom button primary */

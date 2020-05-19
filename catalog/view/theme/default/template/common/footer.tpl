@@ -61,12 +61,11 @@
 
 
 
-<footer>
-  <div class="container">
+<footer  class="container">
+  <div>
     <div class="row">
       <?php if ($informations) { ?>
       <div class="col-sm-3">
-        <h5>Ajuda e Suporte</h5>
         <ul class="list-unstyled">
           <?php foreach ($informations as $information) { ?>
           <li><a href="<?php echo $information['href']; ?>"><?php echo $information['title']; ?></a></li>
@@ -75,22 +74,13 @@
       </div>
       <?php } ?>
       <div class="col-sm-5">
-        <h5>Atendimento</h5>
-        <p>de segunda a sexta</p>
-        <p>10Hrs às 18Hrs</p>
-        <p>(11) 95379-6206</p>
-        <p>hello@loristore.com.br</p>
+        <p>JOIAS NAGALLI © 2015 - Todos os direitos reservados.</p>
+        <p>As imagens e informações exibidas são exclusivas do site.</p>
+        <p>É proibida a reprodução sem autorização, seu conteúdo pode sofrer alterações sem aviso prévio.</p>
       </div>
 
-      <div class="col-sm-4" id="newsletter">
-        <i class="fa fa-envelope"></i><h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ASSINE NOSSA NEWSLETTER</h5>
-        <div class="form-group">
-          <input type="text" class="form-control form-control-lg" id="email" placeholder="E-mail">
-        </div>
-        <div class="form-group">
-          <button type="submit" class="btn btn-default" style="width: 100%;" onclick="return regNewsletter();">Enviar</button>
-        </div>
-
+      <div class="col-sm-4" style="padding-top: 12px;">
+        <span><p style="text-align: right;"><img src="image/catalog/cielo_api/cartoes.png" style="width: 100%;"></p></span>
       </div>
 
     </div>    
@@ -99,72 +89,16 @@
 
 </footer>
 
-<div class="row">
-  <div class="col-sm-12">
-    <p style="padding: 30px;font-size: 10px;text-align: center;" ><?php echo $powered; ?></p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <p id="text-powered" ><?php echo $powered; ?></p>
+    </div>
   </div>
 </div>
-
-
-
-<script>
-  function regNewsletter()
-  {
-    var emailpattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    var email = $('#email').val();
-    if(email != "")
-    {
-      if(!emailpattern.test(email))
-      {
-        $("#text-danger-newsletter").remove();
-        $("#newsletter").first("div").removeClass("has-error");
-        $("#newsletter-email").append('<div class="text-danger" id="text-danger-newsletter">E-Mail preenchido incorretamente.</div>');
-        $("#newsletter").first("div").addClass("has-error");
-
-        return false;
-      }
-      else
-      {
-        $.ajax({
-          url: 'index.php?route=extension/module/newsletters/add',
-          type: 'post',
-          data: 'email=' + $('#txtemail').val(),
-          dataType: 'json',
-          async:false,
-
-          success: function(json) {
-
-            if (json.message == true) {
-              alert('Cadastrado com sucesso.');
-              window.location= "index.php";
-            }
-            else {
-              $("#text-danger-newsletter").remove();
-              $("#newsletter").first("div").removeClass("has-error");
-              $("#newsletter-email").append(json.message);
-              $("#newsletter").first("div").addClass("has-error");
-              console.log()
-            }
-          }
-        });
-        return false;
-      }
-    }
-    else
-    {
-
-      $("#text-danger-newsletter").remove();
-      $("#newsletter").first("div").removeClass("has-error");
-      $("#form-newsletter-error").append('<div class="text-danger" id="text-danger-newsletter">E-Mail preenchido incorretamente.</div>');
-      $("#newsletter").first("div").addClass("has-error");
-
-      return false;
-    }
-  }
-</script>
-
-
-</body></html>
+  
+</body>
+</html>
 
 
 

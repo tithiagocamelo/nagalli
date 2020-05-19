@@ -51,8 +51,13 @@
           <li><a href="<?php echo $wishlist; ?>"><?php echo $text_wishlist; ?></a></li>
         </div>
         <div class="col-sm-6 pull-right">
-          <li><a href="<?php echo $login; ?>"><?php echo $text_login; ?></a></li>
-          <li><a href="<?php echo $register; ?>"><?php echo $text_register; ?></a></li>
+          <?php if ($logged) { ?>
+          <li class="pull-right"><a href="<?php echo $account; ?>"><?php echo $text_account; ?></a></li>
+          <li class="pull-right"><a href="<?php echo $order; ?>"><?php echo $text_order; ?></a></li>
+          <?php } else { ?>
+          <li class="pull-right"><a href="<?php echo $login; ?>"><?php echo $text_login; ?></a></li>
+          <li class="pull-right"><a href="<?php echo $register; ?>"><?php echo $text_register; ?></a></li>
+          <?php } ?>
         </div>
       </div>
     </div>
