@@ -70,20 +70,50 @@ body {
   background-color: #00000000;
 }
 
-div#top-menu-access li {
+#top-menu-access li {
   list-style: none;
   display: inline-block;
   padding: 0 10px 0 0;
 }
 
+#cart-button {
+  padding: 10px 12px;
+  background-color: #505050;
+  width: 44px;
+  height: 43px;
+  border-radius: 4px;
+  float: right;
+}
 
+#cart-button i {
+  font-size: 20px;
+}
 
+#top, #top i {
+  color: #cccccc !important;
+}
 
+#cart p {
+  color: #383838;
+}
 
+@media screen and (min-width: 768px) {
+  
+  #logo {
+      padding: 15px 0;
+  }
 
+  #cart {
+      margin-top: 30px;
+  }
+  
+}
 
-
-
+#cart-total {
+  position: absolute;
+  right: 50px;
+  top: 28%;
+}
 
 
 /** custom button primary */
