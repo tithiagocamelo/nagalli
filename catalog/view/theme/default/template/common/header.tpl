@@ -54,6 +54,9 @@
       </div>
     </div>
 
+    <div class="col-sm-3 pull-right"><?php echo $cart; ?></div>
+
+    <?php if(false) { ?>
     <div class="col-sm-4 pull-right jumbotron-ls">
       <div id="top-links" class="nav pull-right">
         <ul class="list-inline">
@@ -79,6 +82,8 @@
         </ul>
       </div>
     </div>
+    <?php } ?>
+
 <?php } ?>
 
     <?php //echo $currency; ?>
