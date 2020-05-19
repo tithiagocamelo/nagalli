@@ -198,12 +198,10 @@ var cart = {
 					html += '    </div';
 					html += '  </div>';
 					html += '</div>';
-		
-					$(document).ready(function() {
-						$('body').append(html);
-						$('#modal-quickview').modal('show');
-					});
-					
+
+					document.body.insertAdjacentHTML("beforeend", html);
+					$('#modal-quickview').modal('show');
+										
 				}
 			});
 
