@@ -89,6 +89,15 @@ body {
   font-size: 20px;
 }
 
+#cart.open > .btn {
+  background-image: none;
+  background-color: #FFFFFF;
+  border: 1px solid #E6E6E6;
+  color: #666;
+  box-shadow: none;
+  text-shadow: none;
+}
+
 #top, #top i {
   color: #cccccc !important;
 }
