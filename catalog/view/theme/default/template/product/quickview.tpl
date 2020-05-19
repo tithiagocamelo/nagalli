@@ -96,7 +96,7 @@
                 <?php echo $captcha; ?>
                 <div class="buttons clearfix">
                   <div class="pull-right">
-                    <button type="button" id="button-review" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary"><?php echo $button_continue; ?></button>
+                    <button type="button" id="button-review" data-loading-text="<?php echo $text_loading; ?>" class="btn-primary-nagalli"><?php echo $button_continue; ?></button>
                   </div>
                 </div>
                 <?php } else { ?>
@@ -287,7 +287,7 @@
               <input type="text" name="quantity" value="<?php echo $minimum; ?>" size="2" id="input-quantity" class="form-control" />
               <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
               <br />
-              <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary btn-lg btn-block"><?php echo $button_cart; ?></button>
+              <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn-primary-nagalli btn-lg btn-block"><?php echo $button_cart; ?></button>
             </div>
             <?php if ($minimum > 1) { ?>
             <div class="alert alert-info"><i class="fa fa-info-circle"></i> <?php echo $text_minimum; ?></div>
@@ -313,7 +313,7 @@
           <?php } ?>
         </div>
       </div>
-      <?php if ($products) { ?>
+      <?php if (false or $products) { ?>
       <h3><?php echo $text_related; ?></h3>
       <div class="row">
         <?php $i = 0; ?>
