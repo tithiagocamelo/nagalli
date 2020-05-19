@@ -42,7 +42,7 @@
 <nav id="top">
   <div class="container">
 
-<?php if(isset($_GET['testes'])) { ?>
+<?php if(!isset($_GET['testes'])) { ?>
 
     <div class="col-sm-12">
       <div class="row" id="top-menu-access">
