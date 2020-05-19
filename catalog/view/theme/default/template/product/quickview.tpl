@@ -572,19 +572,15 @@ $('#button-review').on('click', function() {
 	});
 });
 
-$(document).ready(function() {
+$('#product_image').elevateZoom({
+  gallery: 'galery',
+  galleryActiveClass: 'active',
+  imageCrossfade: true
+});
 
-  $('#product_image').elevateZoom({
-    gallery: 'galery',
-    galleryActiveClass: 'active',
-    imageCrossfade: true
-  });
-
-  $("#product_image").bind("click", function(e) {  
-    let ez = $('#product_image').data('elevateZoom');	
-    $.fancybox(ez.getGalleryList());
-    return false;
-  });
-
+$("#product_image").bind("click", function(e) {  
+  let ez = $('#product_image').data('elevateZoom');	
+  $.fancybox(ez.getGalleryList());
+  return false;
 });
 </script>
