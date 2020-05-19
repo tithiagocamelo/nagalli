@@ -462,7 +462,7 @@ $('#button-cart').on('click', function() {
 });
 //--></script>
 <script type="text/javascript"><!--
-$('.date').datetimepicker({
+/* $('.date').datetimepicker({
 	pickTime: false
 });
 
@@ -473,7 +473,7 @@ $('.datetime').datetimepicker({
 
 $('.time').datetimepicker({
 	pickDate: false
-});
+}); */
 
 $('button[id^=\'button-upload\']').on('click', function() {
 	var node = this;
