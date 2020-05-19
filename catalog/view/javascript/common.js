@@ -138,42 +138,73 @@ $(document).ready(function() {
 
 // Cart add remove functions
 var cart = {
-	'add': function(product_id, quantity) {
-		$.ajax({
-			url: 'index.php?route=checkout/cart/add',
-			type: 'post',
-			data: 'product_id=' + product_id + '&quantity=' + (typeof(quantity) != 'undefined' ? quantity : 1),
-			dataType: 'json',
-			beforeSend: function() {
-				$('#cart > button').button('loading');
-			},
-			complete: function() {
-				$('#cart > button').button('reset');
-			},
-			success: function(json) {
-				$('.alert, .text-danger').remove();
+	'add': function(product_id, quantity, isProductScreen = false) {
+		if(isProductScreen) {
+			$.ajax({
+				url: 'index.php?route=checkout/cart/add',
+				type: 'post',
+				data: 'product_id=' + product_id + '&quantity=' + (typeof(quantity) != 'undefined' ? quantity : 1),
+				dataType: 'json',
+				beforeSend: function() {
+					$('#cart > button').button('loading');
+				},
+				complete: function() {
+					$('#cart > button').button('reset');
+				},
+				success: function(json) {
+					$('.alert, .text-danger').remove();
 
-				if (json['redirect']) {
-					location = json['redirect'];
+					if (json['redirect']) {
+						location = json['redirect'];
+					}
+
+					if (json['success']) {
+						$('#content').parent().before('<div class="alert alert-success"><i class="fa fa-check-circle"></i> ' + json['success'] + ' <button type="button" class="close" data-dismiss="alert">&times;</button></div>');
+
+						// Need to set timeout otherwise it wont update the total
+						setTimeout(function () {
+							$('#cart-total').html(' ' + json['total'] + '');
+						}, 100);
+
+						$('html, body').animate({ scrollTop: 0 }, 'slow');
+
+						$('#cart > ul').load('index.php?route=common/cart/info ul li');
+					}
+				},
+				error: function(xhr, ajaxOptions, thrownError) {
+					alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
 				}
-
-				if (json['success']) {
-					$('#content').parent().before('<div class="alert alert-success"><i class="fa fa-check-circle"></i> ' + json['success'] + ' <button type="button" class="close" data-dismiss="alert">&times;</button></div>');
-
-					// Need to set timeout otherwise it wont update the total
-					setTimeout(function () {
-						$('#cart-total').html(' ' + json['total'] + '');
-					}, 100);
-
-					$('html, body').animate({ scrollTop: 0 }, 'slow');
-
-					$('#cart > ul').load('index.php?route=common/cart/info ul li');
+			});
+		} else {
+			
+			$('#modal-quickview').remove();
+		
+			var element = this;
+		
+			$.ajax({
+				url: 'index.php?route=product/quickview&quickview=1&' + 'product_id=' + product_id,
+				type: 'get',
+				dataType: 'html',
+				success: function(response) {
+					html  = '<div id="modal-quickview" class="modal">';
+					html += '  <div class="modal-dialog">';
+					html += '    <div class="modal-content">';
+					html += '      <div class="modal-header">';
+					html += '        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>';
+					html += '        <h4 class="modal-title">' + $(element).text() + '</h4>';
+					html += '      </div>';
+					html += '      <div class="modal-body">' + response + '</div>';
+					html += '    </div';
+					html += '  </div>';
+					html += '</div>';
+		
+					$('body').append(html);
+		
+					$('#modal-quickview').modal('show');
 				}
-			},
-			error: function(xhr, ajaxOptions, thrownError) {
-				alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-			}
-		});
+			});
+
+		}
 	},
 	'update': function(key, quantity) {
 		$.ajax({

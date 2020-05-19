@@ -116,6 +116,9 @@ body {
   top: 28%;
 }
 
+.product-thumb .button-group button:hover {
+  background-color: #fff0 !important;
+}
 
 
 footer {
