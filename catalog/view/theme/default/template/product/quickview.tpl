@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" style="width: 100%;">
   <div class="row"><?php echo $column_left; ?>
     <?php if ($column_left && $column_right) { ?>
     <?php $class = 'col-sm-6'; ?>
@@ -114,10 +114,10 @@
         <?php } ?>
         <div class="<?php echo $class; ?>">
           <div class="btn-group">
-            <button type="button" data-toggle="tooltip" class="btn btn-default" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product_id; ?>');"><i class="fa fa-heart"></i></button>
-            <!--<button type="button" data-toggle="tooltip" class="btn btn-default" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product_id; ?>');"><i class="fa fa-exchange"></i></button>-->
+            <!--<button type="button" data-toggle="tooltip" class="btn btn-default" title="<?php // echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product_id; ?>');"><i class="fa fa-heart"></i></button>-->
+            <!--<button type="button" data-toggle="tooltip" class="btn btn-default" title="<?php // echo $button_compare; ?>" onclick="compare.add('<?php echo $product_id; ?>');"><i class="fa fa-exchange"></i></button>-->
           </div>
-          <h1><?php echo $heading_title; ?></h1>
+          <h1 id="titulo-produto" class="hidden"><?php echo $heading_title; ?></h1>
           <ul class="list-unstyled">
             <?php if ($manufacturer) { ?>
             <li><?php echo $text_manufacturer; ?> <a href="<?php echo $manufacturers; ?>"><?php echo $manufacturer; ?></a></li>
@@ -474,6 +474,8 @@ $('.datetime').datetimepicker({
 $('.time').datetimepicker({
 	pickDate: false
 }); */
+
+$('#titulo-modal').html($('#titulo-produto').text())
 
 $('button[id^=\'button-upload\']').on('click', function() {
 	var node = this;
