@@ -529,6 +529,7 @@ $('button[id^=\'button-upload\']').on('click', function() {
 	}, 500);
 });
 </script>
+<script src="catalog/view/javascript/nagalli/js/jquery.elevateZoom.min.js"></script>
 <script type="text/javascript">
 $('#review').delegate('.pagination a', 'click', function(e) {
     e.preventDefault();

@@ -98,8 +98,6 @@
   </div>
 </div>
 
-  <script src="catalog/view/javascript/nagalli/js/jquery.elevateZoom.min.js"></script>
-
 </body>
 </html>
 
