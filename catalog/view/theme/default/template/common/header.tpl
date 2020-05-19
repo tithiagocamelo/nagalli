@@ -47,10 +47,13 @@
     <div class="col-sm-12">
       <div class="row" id="top-menu-access">
         <div class="col-sm-6">
-          <li><i class="fa fa-home"></i></li>
-          <li>teste2</li>
+          <li><a href="<?php echo $home; ?>"><i class="fa fa-home"></i></a></li>
+          <li><a href="<?php echo $wishlist; ?>"><?php echo $text_wishlist; ?></a></li>
         </div>
-        <div class="col-sm-6 pull-right"></div>
+        <div class="col-sm-6 pull-right">
+          <li><a href="<?php echo $login; ?>"><?php echo $text_login; ?></a></li>
+          <li><a href="<?php echo $register; ?>"><?php echo $text_register; ?></a></li>
+        </div>
       </div>
     </div>
 
