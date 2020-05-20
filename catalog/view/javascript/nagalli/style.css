@@ -187,12 +187,18 @@ footer {
   padding: 5px 10px;
 }
 
-#product input[type=radio]:checked {
+/* #product input[type=radio]:checked {
   color: #332f3590 !important;
   background-color: #332f3590 !important;
+} */
 
+.radio.active {
+  background-color: #aaa !important;
 }
 
+.radio.active label {
+  color: #383838 !important;
+}
 
 
 /** custom button primary */

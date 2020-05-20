@@ -16,12 +16,12 @@
         <?php } ?>
         <div class="<?php echo $class; ?>">
           <?php if ($thumb || $images) { ?>    
-            <img id="product_image" src="<?php echo $thumb; ?>" data-zoom-image="<?php echo $popup; ?>"/>
+            <img id="product_quickview_image" src="<?php echo $thumb; ?>" data-zoom-image="<?php echo $popup; ?>"/>
             <?php if ($images) { ?>
               <div class="gallery">
                 <?php foreach ($images as $image) { ?>
                   <a href="#" data-image="<?php echo $image['thumb']; ?>" data-zoom-image="<?php echo $image['popup']; ?>">
-                    <img id="product_image" src="<?php echo $image['thumb']; ?>" />
+                    <img id="product_quickview_image" src="<?php echo $image['thumb']; ?>" />
                   </a>
                 <?php } ?>
               </div>
@@ -177,6 +177,8 @@
             </div>
             <?php } ?>
             <?php if ($option['type'] == 'radio') { ?>
+
+              <input type="text" name="option[<?php echo $option['product_option_id']; ?>]" />
 
               
 
@@ -570,11 +572,17 @@ $('#button-review').on('click', function() {
 
 $('#titulo-modal').html($('#titulo-produto').text());
 
-$('#product_image').elevateZoom();
+$('#product_quickview_image').elevateZoom();
 
-$("#product_image").bind("click", function(e) {  
-  let ez = $('#product_image').data('elevateZoom');	
+$("#product_quickview_image").bind("click", function(e) {  
+  let ez = $('#product_quickview_image').data('elevateZoom');	
   // $.fancybox(ez.getGalleryList());
   return false;
 });
+
+$('.radio').click(function() { 
+  $('.radio').removeClass('active'); 
+  $(this).addClass('active'); 
+});
+
 </script>
