@@ -385,7 +385,9 @@
 </div>
 
 teste ok
-
+<script type="text/javascript"><!--
+console.log('teste1')
+</script>
 <?php if (false) { ?>
 <script type="text/javascript"><!--
 console.log('teste1')
