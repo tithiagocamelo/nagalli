@@ -197,11 +197,9 @@ var cart = {
 					html += '  </div>';
 					html += '</div>';
 
-					setTimeout(() => {
-						$('body').append(html);
-						$('#modal-quickview').modal('show');
-					}, 100);
-										
+					$('body').append(html);
+					$('#modal-quickview').modal('show');
+
 				}
 			});
 
