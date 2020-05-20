@@ -185,7 +185,7 @@ var cart = {
 				dataType: 'html',
 				success: function(response) {
 
-				let html  = '<div id="modal-quickview" class="modal">';
+				var html  = '<div id="modal-quickview" class="modal">';
 					html += '  <div class="modal-dialog">';
 					html += '    <div class="modal-content">';
 					html += '      <div class="modal-header">';

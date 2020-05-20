@@ -384,9 +384,8 @@
     <?php echo $column_right; ?></div>
 </div>
 
-teste ok
 <script>
-console.log('teste1')
+  console.log('teste1');
 </script>
 <?php if (false) { ?>
 <script type="text/javascript"><!--
