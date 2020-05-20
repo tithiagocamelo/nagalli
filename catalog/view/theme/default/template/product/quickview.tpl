@@ -562,15 +562,11 @@ $('#button-review').on('click', function() {
 
 $('#titulo-modal').html($('#titulo-produto').text());
 
-$('#product_image').elevateZoom({
-  gallery: 'galery',
-  galleryActiveClass: 'active',
-  imageCrossfade: true
-});
+$('#product_image').elevateZoom();
 
 $("#product_image").bind("click", function(e) {  
   let ez = $('#product_image').data('elevateZoom');	
-  $.fancybox(ez.getGalleryList());
+  // $.fancybox(ez.getGalleryList());
   return false;
 });
 </script>
