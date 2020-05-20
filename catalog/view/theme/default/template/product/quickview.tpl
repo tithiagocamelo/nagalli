@@ -458,20 +458,9 @@ $('#button-cart').on('click', function() {
 });
 </script>
 <script type="text/javascript">
-/* $('.date').datetimepicker({
-	pickTime: false
-});
-
-$('.datetime').datetimepicker({
-	pickDate: true,
-	pickTime: true
-});
-
-$('.time').datetimepicker({
-	pickDate: false
-}); */
-
+console.log('teste1')
 $('#titulo-modal').html($('#titulo-produto').text());
+console.log('teste2')
 
 $('button[id^=\'button-upload\']').on('click', function() {
 	var node = this;
