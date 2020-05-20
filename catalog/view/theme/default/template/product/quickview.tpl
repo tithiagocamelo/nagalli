@@ -383,6 +383,10 @@
       <?php echo $content_bottom; ?></div>
     <?php echo $column_right; ?></div>
 </div>
+
+teste ok
+
+<?php if (false) { ?>
 <script type="text/javascript"><!--
 console.log('teste1')
 $('select[name=\'recurring_id\'], input[name="quantity"]').change(function(){
@@ -571,3 +575,4 @@ $("#product_image").bind("click", function(e) {
   return false;
 });
 </script>
+<?php } ?>
