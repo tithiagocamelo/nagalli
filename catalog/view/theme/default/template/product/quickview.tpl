@@ -1,10 +1,4 @@
-<?php echo $header; ?>
-<div class="container">
-  <ul class="breadcrumb">
-    <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-    <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
-    <?php } ?>
-  </ul>
+<div class="container" style="width: 100%;">
   <div class="row"><?php echo $column_left; ?>
     <?php if ($column_left && $column_right) { ?>
     <?php $class = 'col-sm-6'; ?>
@@ -21,17 +15,17 @@
         <?php $class = 'col-sm-8'; ?>
         <?php } ?>
         <div class="<?php echo $class; ?>">
-          <?php if ($thumb || $images) { ?>
-          <ul class="thumbnails">
-            <?php if ($thumb) { ?>
-            <li><a class="thumbnail" href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>"><img src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a></li>
-            <?php } ?>
+          <?php if ($thumb || $images) { ?>    
+            <img id="product_image" src="<?php echo $thumb; ?>" data-zoom-image="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" />
             <?php if ($images) { ?>
-            <?php foreach ($images as $image) { ?>
-            <li class="image-additional"><a class="thumbnail" href="<?php echo $image['popup']; ?>" title="<?php echo $heading_title; ?>"> <img src="<?php echo $image['thumb']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a></li>
+              <div class="galery">
+                <?php foreach ($images as $image) { ?>
+                  <a href="#" data-image="<?php echo $image['thumb']; ?>" data-zoom-image="<?php echo $image['popup']; ?>">
+                    <img id="product_image" src="<?php echo $image['thumb']; ?>" />
+                  </a>
+                <?php } ?>
+              </div>
             <?php } ?>
-            <?php } ?>
-          </ul>
           <?php } ?>
           <ul class="nav nav-tabs">
             <li class="active"><a href="#tab-description" data-toggle="tab"><?php echo $tab_description; ?></a></li>
@@ -120,10 +114,10 @@
         <?php } ?>
         <div class="<?php echo $class; ?>">
           <div class="btn-group">
-            <button type="button" data-toggle="tooltip" class="btn btn-default" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product_id; ?>');"><i class="fa fa-heart"></i></button>
-            <!--<button type="button" data-toggle="tooltip" class="btn btn-default" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product_id; ?>');"><i class="fa fa-exchange"></i></button>-->
+            <!--<button type="button" data-toggle="tooltip" class="btn btn-default" title="<?php // echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product_id; ?>');"><i class="fa fa-heart"></i></button>-->
+            <!--<button type="button" data-toggle="tooltip" class="btn btn-default" title="<?php // echo $button_compare; ?>" onclick="compare.add('<?php echo $product_id; ?>');"><i class="fa fa-exchange"></i></button>-->
           </div>
-          <h1><?php echo $heading_title; ?></h1>
+          <h1 id="titulo-produto" class="hidden"><?php echo $heading_title; ?></h1>
           <ul class="list-unstyled">
             <?php if ($manufacturer) { ?>
             <li><?php echo $text_manufacturer; ?> <a href="<?php echo $manufacturers; ?>"><?php echo $manufacturer; ?></a></li>
@@ -389,7 +383,8 @@
       <?php echo $content_bottom; ?></div>
     <?php echo $column_right; ?></div>
 </div>
-<script type="text/javascript"><!--
+
+<script type="text/javascript">
 $('select[name=\'recurring_id\'], input[name="quantity"]').change(function(){
 	$.ajax({
 		url: 'index.php?route=product/product/getRecurringDescription',
@@ -408,8 +403,9 @@ $('select[name=\'recurring_id\'], input[name="quantity"]').change(function(){
 		}
 	});
 });
-//--></script>
-<script type="text/javascript"><!--
+</script>
+
+<script type="text/javascript">
 $('#button-cart').on('click', function() {
 	$.ajax({
 		url: 'index.php?route=checkout/cart/add',
@@ -462,21 +458,9 @@ $('#button-cart').on('click', function() {
         }
 	});
 });
-//--></script>
-<script type="text/javascript"><!--
-$('.date').datetimepicker({
-	pickTime: false
-});
+</script>
 
-$('.datetime').datetimepicker({
-	pickDate: true,
-	pickTime: true
-});
-
-$('.time').datetimepicker({
-	pickDate: false
-});
-
+<script type="text/javascript">
 $('button[id^=\'button-upload\']').on('click', function() {
 	var node = this;
 
@@ -528,8 +512,9 @@ $('button[id^=\'button-upload\']').on('click', function() {
 		}
 	}, 500);
 });
-//--></script>
-<script type="text/javascript"><!--
+</script>
+
+<script type="text/javascript">
 $('#review').delegate('.pagination a', 'click', function(e) {
     e.preventDefault();
 
@@ -571,15 +556,21 @@ $('#button-review').on('click', function() {
 		}
 	});
 });
+</script>
 
-$(document).ready(function() {
-	$('.thumbnails').magnificPopup({
-		type:'image',
-		delegate: 'a',
-		gallery: {
-			enabled:true
-		}
-	});
+<script type="text/javascript">
+
+$('#titulo-modal').html($('#titulo-produto').text());
+
+$('#product_image').elevateZoom({
+  gallery: 'galery',
+  galleryActiveClass: 'active',
+  imageCrossfade: true
 });
-//--></script>
-<?php echo $footer; ?>
+
+$("#product_image").bind("click", function(e) {  
+  let ez = $('#product_image').data('elevateZoom');	
+  $.fancybox(ez.getGalleryList());
+  return false;
+});
+</script>
