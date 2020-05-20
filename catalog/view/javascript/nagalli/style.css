@@ -144,7 +144,7 @@ footer {
 }
 
 
-#gallery_01 img{
+#gallery img{
   border:2px solid white;
 }
 
@@ -152,7 +152,9 @@ footer {
   border:2px solid #333 !important;
 }
 
-
+.zoomContainer {
+  z-index: 1060;
+}
 
 /** custom button primary */
 

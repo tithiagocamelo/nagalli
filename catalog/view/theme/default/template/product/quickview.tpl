@@ -16,9 +16,9 @@
         <?php } ?>
         <div class="<?php echo $class; ?>">
           <?php if ($thumb || $images) { ?>    
-            <img id="product_image" src="<?php echo $thumb; ?>" data-zoom-image="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" />
+            <img id="product_image" src="<?php echo $thumb; ?>" data-zoom-image="<?php echo $popup; ?>"/>
             <?php if ($images) { ?>
-              <div class="galery">
+              <div class="gallery">
                 <?php foreach ($images as $image) { ?>
                   <a href="#" data-image="<?php echo $image['thumb']; ?>" data-zoom-image="<?php echo $image['popup']; ?>">
                     <img id="product_image" src="<?php echo $image['thumb']; ?>" />
