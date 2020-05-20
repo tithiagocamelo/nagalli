@@ -12,7 +12,7 @@
         <?php if ($column_left || $column_right) { ?>
         <?php $class = 'col-sm-6'; ?>
         <?php } else { ?>
-        <?php $class = 'col-sm-8'; ?>
+        <?php $class = 'col-sm-7'; ?>
         <?php } ?>
         <div class="<?php echo $class; ?>">
           <?php if ($thumb || $images) { ?>    
@@ -110,7 +110,7 @@
         <?php if ($column_left || $column_right) { ?>
         <?php $class = 'col-sm-6'; ?>
         <?php } else { ?>
-        <?php $class = 'col-sm-4'; ?>
+        <?php $class = 'col-sm-5'; ?>
         <?php } ?>
         <div class="<?php echo $class; ?>">
           <div class="btn-group">
@@ -385,7 +385,7 @@
 </div>
 
 teste ok
-<script type="text/javascript"><!--
+<script type="text/javascript">
 console.log('teste1')
 </script>
 <?php if (false) { ?>
