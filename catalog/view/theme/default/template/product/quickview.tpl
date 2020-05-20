@@ -403,7 +403,7 @@ $('select[name=\'recurring_id\'], input[name="quantity"]').change(function(){
 	});
 });
 //--></script>
-<script type="text/javascript">
+<script type="text/javascript"><!--
 $('#button-cart').on('click', function() {
 	$.ajax({
 		url: 'index.php?route=checkout/cart/add',
@@ -456,11 +456,9 @@ $('#button-cart').on('click', function() {
         }
 	});
 });
-</script>
-<script type="text/javascript">
+//--></script>
+<script type="text/javascript"><!--
 console.log('teste1')
-$('#titulo-modal').html($('#titulo-produto').text());
-console.log('teste2')
 
 $('button[id^=\'button-upload\']').on('click', function() {
 	var node = this;
@@ -513,8 +511,7 @@ $('button[id^=\'button-upload\']').on('click', function() {
 		}
 	}, 500);
 });
-</script>
-<script src="catalog/view/javascript/nagalli/js/jquery.elevateZoom.min.js"></script>
+//--></script>
 <script type="text/javascript">
 $('#review').delegate('.pagination a', 'click', function(e) {
     e.preventDefault();
@@ -557,6 +554,12 @@ $('#button-review').on('click', function() {
 		}
 	});
 });
+//--></script>
+
+
+<script type="text/javascript">
+$('#titulo-modal').html($('#titulo-produto').text());
+console.log('teste2')
 
 $('#product_image').elevateZoom({
   gallery: 'galery',
