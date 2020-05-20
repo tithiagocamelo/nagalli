@@ -205,6 +205,9 @@ footer {
   color: #383838 !important;
 }
 
+.panel, .panel-default>.panel-heading {
+  background: transparent;
+}
 
 /** custom button primary */
 

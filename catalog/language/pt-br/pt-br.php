@@ -23,7 +23,7 @@ $_['text_no_results']       = 'Não há resultados!';
 // Buttons
 $_['button_address_add']    = 'Adicionar endereço';
 $_['button_back']           = 'Voltar';
-$_['button_continue']       = 'Continuar';
+$_['button_continue']       = 'Continuar Comprando';
 $_['button_cart']           = 'Comprar';
 $_['button_cancel']         = 'Cancelar';
 $_['button_compare']        = 'Comparar';
