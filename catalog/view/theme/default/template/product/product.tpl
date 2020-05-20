@@ -22,16 +22,16 @@
         <?php } ?>
         <div class="<?php echo $class; ?>">
           <?php if ($thumb || $images) { ?>
-          <ul class="thumbnails">
-            <?php if ($thumb) { ?>
-            <li><a class="thumbnail" href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>"><img src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a></li>
-            <?php } ?>
+            <img id="product_image" src="<?php echo $thumb; ?>" data-zoom-image="<?php echo $popup; ?>"/>
             <?php if ($images) { ?>
-            <?php foreach ($images as $image) { ?>
-            <li class="image-additional"><a class="thumbnail" href="<?php echo $image['popup']; ?>" title="<?php echo $heading_title; ?>"> <img src="<?php echo $image['thumb']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a></li>
+              <div class="gallery">
+                <?php foreach ($images as $image) { ?>
+                  <a href="#" data-image="<?php echo $image['thumb']; ?>" data-zoom-image="<?php echo $image['popup']; ?>">
+                    <img id="product_image" src="<?php echo $image['thumb']; ?>" />
+                  </a>
+                <?php } ?>
+              </div>
             <?php } ?>
-            <?php } ?>
-          </ul>
           <?php } ?>
           <ul class="nav nav-tabs">
             <li class="active"><a href="#tab-description" data-toggle="tab"><?php echo $tab_description; ?></a></li>
@@ -575,15 +575,18 @@ $('#button-review').on('click', function() {
 		}
 	});
 });
-
-$(document).ready(function() {
-	$('.thumbnails').magnificPopup({
-		type:'image',
-		delegate: 'a',
-		gallery: {
-			enabled:true
-		}
-	});
-});
 //--></script>
+
+<script type="text/javascript">
+
+$('#titulo-modal').html($('#titulo-produto').text());
+
+$('#product_image').elevateZoom();
+
+$("#product_image").bind("click", function(e) {  
+  let ez = $('#product_image').data('elevateZoom');	
+  // $.fancybox(ez.getGalleryList());
+  return false;
+});
+</script>
 <?php echo $footer; ?>

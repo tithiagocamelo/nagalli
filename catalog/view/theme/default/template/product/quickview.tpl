@@ -177,6 +177,10 @@
             </div>
             <?php } ?>
             <?php if ($option['type'] == 'radio') { ?>
+
+              
+
+<?php if(false) { ?>
             <div class="form-group<?php echo ($option['required'] ? ' required' : ''); ?>">
               <label class="control-label"><?php echo $option['name']; ?></label>
               <div id="input-option<?php echo $option['product_option_id']; ?>">
@@ -196,6 +200,10 @@
                 <?php } ?>
               </div>
             </div>
+
+                    
+<?php } ?>
+
             <?php } ?>
             <?php if ($option['type'] == 'checkbox') { ?>
             <div class="form-group<?php echo ($option['required'] ? ' required' : ''); ?>">
