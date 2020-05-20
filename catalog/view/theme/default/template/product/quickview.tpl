@@ -384,6 +384,7 @@
     <?php echo $column_right; ?></div>
 </div>
 <script type="text/javascript"><!--
+console.log('teste1')
 $('select[name=\'recurring_id\'], input[name="quantity"]').change(function(){
 	$.ajax({
 		url: 'index.php?route=product/product/getRecurringDescription',
@@ -404,6 +405,7 @@ $('select[name=\'recurring_id\'], input[name="quantity"]').change(function(){
 });
 //--></script>
 <script type="text/javascript"><!--
+console.log('teste2')
 $('#button-cart').on('click', function() {
 	$.ajax({
 		url: 'index.php?route=checkout/cart/add',
@@ -458,7 +460,8 @@ $('#button-cart').on('click', function() {
 });
 //--></script>
 <script type="text/javascript"><!--
-console.log('teste1')
+console.log('teste3')
+$('#titulo-modal').html($('#titulo-produto').text());
 
 $('button[id^=\'button-upload\']').on('click', function() {
 	var node = this;
@@ -513,6 +516,7 @@ $('button[id^=\'button-upload\']').on('click', function() {
 });
 //--></script>
 <script type="text/javascript">
+console.log('teste4')
 $('#review').delegate('.pagination a', 'click', function(e) {
     e.preventDefault();
 
@@ -554,12 +558,6 @@ $('#button-review').on('click', function() {
 		}
 	});
 });
-//--></script>
-
-
-<script type="text/javascript">
-$('#titulo-modal').html($('#titulo-produto').text());
-console.log('teste2')
 
 $('#product_image').elevateZoom({
   gallery: 'galery',
