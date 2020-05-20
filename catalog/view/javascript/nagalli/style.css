@@ -156,6 +156,45 @@ footer {
   z-index: 1060;
 }
 
+
+
+#product input[type=radio] {
+  position: absolute;
+  visibility: hidden;
+  display: none;
+}
+
+#product .radio {
+    background-color: #383838;
+    float:left;
+    margin: 5px 2px;
+}
+
+.form-group {
+    clear:both;
+    margin-top: 10px;
+}
+
+.radio+.radio {
+    margin-top: 5px;
+}
+
+#product .radio label {
+  color: #fff;
+  display: inline-block;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+#product input[type=radio]:checked {
+  color: #332f3590 !important;
+  background-color: #332f3590 !important;
+
+}
+
+
+
 /** custom button primary */
 
 .btn-primary-nagalli { 
