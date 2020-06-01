@@ -9,10 +9,10 @@ Options -Indexes
 
 RewriteEngine On
 
-RewriteBase /nagalli/
+RewriteBase /nagali1/
 
 RewriteCond %{SERVER_PORT} 80
-RewriteRule ^(.*)$ https://www.revendalight.com.br/nagalli/$1 [R,L]
+RewriteRule ^(.*)$ https://www.revendalight.com.br/nagali1/$1 [R,L]
 
 RewriteRule ^sitemap.xml$ index.php?route=extension/feed/google_sitemap [L]
 RewriteRule ^googlebase.xml$ index.php?route=extension/feed/google_base [L]
