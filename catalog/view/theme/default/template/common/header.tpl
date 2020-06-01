@@ -63,6 +63,8 @@
       </div>
     </div>
 
+    <div class="col-sm-5"><?php echo $search; ?></div>
+
     <div class="col-sm-3 pull-right"><?php echo $cart; ?></div>
 
     <?php if(false) { ?>
