@@ -63,8 +63,6 @@
       </div>
     </div>
 
-    <div class="col-sm-5"><?php echo $search; ?></div>
-
     <div class="col-sm-3 pull-right"><?php echo $cart; ?></div>
 
     <?php if(false) { ?>
@@ -100,9 +98,8 @@
     <?php //echo $currency; ?>
     <?php //echo $language; ?>
 
-    <!-- buscador 
-    <div class="col-sm-4 jumbotron-ls pull-right" style="padding-left: 30px;"><?php //echo $search; ?></div>
-    -->
+    <div class="col-sm-4 jumbotron-ls pull-right" style="padding-left: 30px;"><?php echo $search; ?></div>
+    
     <!-- LOGO -->
     <div id="logo" class="col-sm-3">
       <?php if ($logo) { ?>
