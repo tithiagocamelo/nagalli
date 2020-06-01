@@ -80,21 +80,31 @@ h1, h2, h3, h4, h5, h6 {
     }   
 }
 
+nav#top {
+    position: sticky;
+    top: -24px;
+    z-index: 100;
+}
 
 #custom-search-input i {
     position: absolute;
     font-size: 22px;
-    left: -27px;
+	left: -27px;
+	background: #505050;
+    padding: 10px 12px;
+    border-radius: 3px;
 }
 
 #custom-search-input {
-    margin:0;
-    margin-top: 10px;
+    margin: 20px 0 0 40px;
     padding: 0;
 }
 
 #ipt-search {
-	width: 70%;
+	width: 100%;
+    border-radius: 3px;
+    padding: 10px 22px;
+    height: 42px;
 }
 
 #custom-search-input .search-query {
@@ -197,13 +207,15 @@ div.required .control-label:before {
 	background-image: linear-gradient(to bottom, #ddd, #ccc);
 	background-repeat: repeat-x;
 }
+
 /* top */
 #top {
-	/*background-color: #EEEEEE;*/
-	/*border-bottom: 1px solid #e2e2e2;*/
 	padding: 4px 0px 3px 0;
 	margin: 0;
 	min-height: 80px;
+	position: sticky;
+	top: -24px;
+	z-index: 100;
 }
 #top .container {
 	padding: 0 20px;
